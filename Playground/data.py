@@ -5,6 +5,8 @@ from pytrends.request import TrendReq
 import os
 import pandas_datareader.data as web
 
+from utils import get_sliding_window
+
 
 class Data:
     def __init__(self, source=None):
@@ -46,20 +48,19 @@ class Data:
         #                 float_format='%.2f'
         self.df.to_csv(location, kwargs)
 
-    # def reshape(self, window_size):
-    #     """Reshape np array to CxSIZE
-    #     Args:
-    #         window_size (int): The size of each window.
-    #     """
-    #     rows = np.floor(self.np_array.shape[0]/window_size)
-    #     # Resize array to a size multiple of window_size
-    #     self.reshaped_np_array = self.np_array[:window_size*rows]
-    #     # Reshape data into Cx(window_size) matrix
-    #     self.reshaped_np_array = self.reshaped_np_array.reshape(-1, window_size)
-    #
-    # def shuffle(self):
-    #     """Randomly shuffle the rows of our data"""
-    #     self.data = np.random.permutation(self.data)
+    def shuffle(self, random_state=None):
+        """Randomly shuffle the rows of our data
+        Args:
+            random_state (int or numpy.random.RandomState): Seed for the random
+                number generator (if int), or numpy RandomState object
+        """
+        if random_state is not None:
+            self.df = self.df.sample(frac=1, random_state=random_state)
+        else:
+            self.df = self.df.sample(frac=1)
+
+    def normalize(self):
+        self.df = (self.df - self.df.min())/(self.df.max() - self.df.min())
     #
     # def create_sets(self):
     #     """Creates 6 sets of shuffled data for training(70%),
@@ -158,7 +159,7 @@ class Stocks(Data):
                                  start=start_date, end=end_date,
                                  access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
 
-    def moving_average(self, days):
+    def MA(self, days):
         """ Add column to df with moving average over n days
         Args:
             days (int): Days over which to calculate MA
@@ -168,7 +169,7 @@ class Stocks(Data):
         self.df['MA'] = self.df['close'].rolling(days).mean()
         return self.df['MA']
 
-    def weighted_moving_average(self, days):
+    def WMA(self, days):
         """ Add column to df with weighted moving average
             over n days
         Args:
@@ -183,7 +184,7 @@ class Stocks(Data):
                                                               kwargs=kwargs)
         return self.df['WMA']
 
-    def momentum(self, days):
+    def MOM(self, days):
         """ Add column to df with momentum for closing price over n days
         Args:
             days (int): Days over which to calculate weighted MA
@@ -194,16 +195,81 @@ class Stocks(Data):
             lambda x: x[days-1] - x[0], raw=True)
         return self.df['MOM']
 
-    def stochastic_oscillator_K(self, days):
+    def SO_K(self, days):
         """ Add column to df %K over n days
         Args:
             days (int): Days over which to calculate %K
         Returns:
             The added column
         """
-        test = self.df.rolling(days)
-        self.df['SO_K'] = self.df.rolling(days).apply(
-            lambda x: x[-1]['close']))
+        slided_df = get_sliding_window(self.df, days)
+
+        close_idx = self.df.columns.get_loc('close')
+        high_idx = self.df.columns.get_loc('high')
+        low_idx = self.df.columns.get_loc('low')
+
+        def SO_K(w):
+            return (w[-1, close_idx] - w[:, low_idx].min()) / (
+                          w[:, high_idx].max() - w[:, low_idx].min()) * 100
+
+        SO_K_list = [np.nan]*(days-1)
+        self.df['SO_K'] = SO_K_list + [SO_K(w) for w in slided_df]
         return self.df['SO_K']
+
+    def SO_D(self, days):
+        """ Add column to df %D over n days
+        Args:
+            days (int): Days over which to calculate %D
+        Returns:
+            The added column
+        """
+        self.df['SO_D'] = self.df['SO_K'].rolling(days).mean()
+        return self.df['SO_D']
+
+    def RSI(self, days):
+        """ Add column to df with relative strength index over n days
+        Args:
+            days (int): Days over which to calculate relative strength index
+        Returns:
+            The added column
+        """
+        # TODO: needs smoothing, paper is wrong, division by 0
+        def RS(close):
+            gain_sum = 0
+            loss_sum = 0
+            for i in range(1, len(close)):
+                if close[i-1] < close[i]:
+                    gain_sum += close[i] - close[i-1]
+                else:
+                    loss_sum += close[i-1] - close[i]
+            return gain_sum/loss_sum
+
+        self.df['RSI'] = self.df['close'].rolling(days + 1).apply(
+            lambda x: 100 - 100/(1 + RS(x)), raw=True)
+        return self.df['RSI']
+
+    def calc_patel_TI(self, days):
+        """ Calculate the technical indicators from Patel et. al. for n days
+        Args:
+            days (int): Days over which to calculate relative strength index
+        """
+        self.MA(days)
+        self.WMA(days)
+        self.MOM(days)
+        self.SO_K(days)
+        self.SO_D(days)
+        self.RSI(days)
+        # Since to predict close price of day n we need the indicators
+        # of day n-1 we move the above columns one index to the bottom
+        self.df['MA'] = self.df['MA'].shift()
+        self.df['WMA'] = self.df['WMA'].shift()
+        self.df['MOM'] = self.df['MOM'].shift()
+        self.df['SO_K'] = self.df['SO_K'].shift()
+        self.df['SO_D'] = self.df['SO_D'].shift()
+        self.df['RSI'] = self.df['RSI'].shift()
+        # Drop rows with nan
+        self.df.dropna(inplace=True)
+        # Drop columns we don't need
+        self.df.drop(['open', 'high', 'low', 'volume'], axis=1, inplace=True)
 
 
