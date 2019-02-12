@@ -4,6 +4,7 @@ import datetime
 from pytrends.request import TrendReq
 import os
 import pandas_datareader.data as web
+from finta import TA
 
 from utils import get_sliding_window
 
@@ -18,14 +19,6 @@ class Data:
             self.df = pd.read_csv(source, index_col='date')
         else:
             self.df = None
-
-        #self.np_array = None
-        self.X_train = None
-        self.y_train = None
-        self.X_val = None
-        self.y_val = None
-        self.X_test = None
-        self.y_test = None
 
     # def create_np_array(self, column, **kwargs):
     #     """ Create a numpy array from one dataframe column.
@@ -159,16 +152,16 @@ class Stocks(Data):
                                  start=start_date, end=end_date,
                                  access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
 
-    def MA(self, days):
-        """ Add column to df with moving average over n days
-        Args:
-            days (int): Days over which to calculate MA
-        Returns:
-            The added column
-        """
-        self.df['MA'] = self.df['close'].rolling(days).mean()
-        return self.df['MA']
-
+    # def MA(self, days):
+    #     """ Add column to df with moving average over n days
+    #     Args:
+    #         days (int): Days over which to calculate MA
+    #     Returns:
+    #         The added column
+    #     """
+    #     self.df['MA'] = self.df['close'].rolling(days).mean()
+    #     return self.df['MA']
+    #
     def WMA(self, days):
         """ Add column to df with weighted moving average
             over n days
@@ -187,12 +180,12 @@ class Stocks(Data):
     def MOM(self, days):
         """ Add column to df with momentum for closing price over n days
         Args:
-            days (int): Days over which to calculate weighted MA
+            days (int): Days over which to calculate weighted MOM
         Returns:
             The added column
         """
-        self.df['MOM'] = self.df['close'].rolling(days).apply(
-            lambda x: x[days-1] - x[0], raw=True)
+        self.df['MOM'] = self.df['close'].rolling(days+1).apply(
+            lambda x: x[days] - x[0], raw=True)
         return self.df['MOM']
 
     def SO_K(self, days):
@@ -233,7 +226,6 @@ class Stocks(Data):
         Returns:
             The added column
         """
-        # TODO: needs smoothing, paper is wrong, division by 0
         def RS(close):
             gain_sum = 0
             loss_sum = 0
@@ -253,12 +245,27 @@ class Stocks(Data):
         Args:
             days (int): Days over which to calculate relative strength index
         """
-        self.MA(days)
-        self.WMA(days)
-        self.MOM(days)
-        self.SO_K(days)
-        self.SO_D(days)
-        self.RSI(days)
+        # TA.SMA has min_periods=days-1 for some reason
+        self.df['MA'] = TA.SMA(self.df, days)
+        # Equal to my implementation
+        self.df['WMA'] = TA.WMA(self.df, days)
+        # Equal
+        self.df['MOM'] = TA.MOM(self.df, days)
+        # Had highest_high - ohlc['close']
+        # After changing they are equal
+        self.df['STOCH'] = TA.STOCH(self.df, days)
+        # They didn't have period when calling STOCH, instead it was used for 3
+        # STOCHD is actually the mean over 3 days
+        self.df['STOCHD'] = TA.STOCHD(self.df, days)
+        # They used ewm, changed it to simple rolling
+        # They also had ohlc['close'].diff()[1:] which resulted in returning
+        # one less row
+        self.df['RSI'] = TA.RSI(self.df, days)
+        # TODO: What do they mean in the paper
+        self.df['MACD'] = TA.MACD(self.df, signal=days)['SIGNAL']
+        self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days)
+        self.df['ADL'] = TA.ADL(self.df)
+        self.df['CCI'] = TA.CCI(self.df, days)
         # Since to predict close price of day n we need the indicators
         # of day n-1 we move the above columns one index to the bottom
         self.df['MA'] = self.df['MA'].shift()

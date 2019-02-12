@@ -1,18 +1,18 @@
 import numpy as np
 import tensorflow as tf
 import time
-
+import pandas as pd
 import data
 
 # Initialise random state
 R_STATE = np.random.RandomState(0)
 # Define the stocks file we want to read
-STOCK_FILE = '../Data/Stocks/MSFT.2013-12-31.2018-12-31.csv'
+STOCK_FILE = 'pasch.data.csv'
+
 
 # Read the stocks csv into a dataframe
 stock = data.Stocks(STOCK_FILE)
-stock.calc_patel_TI(10)
-stock.normalize()
+#stock = (stock - stock.min())/(stock.max() - stock.min())
 stock.shuffle(R_STATE)
 
 # df_X holds the technical indicators
@@ -29,8 +29,8 @@ val_limit = int(0.85 * len(ar_X))
 
 raw_X_train = ar_X[:train_limit]
 raw_y_train = ar_y[:train_limit]
-raw_X_val = ar_X[train_limit:val_limit]
-raw_y_val = ar_y[train_limit:val_limit]
+raw_X_eval = ar_X[train_limit:val_limit]
+raw_y_eval = ar_y[train_limit:val_limit]
 raw_X_test = ar_X[val_limit:]
 raw_y_test = ar_y[val_limit:]
 
@@ -46,10 +46,6 @@ num_layer_1_cells = 100
 X_train_node = tf.placeholder(tf.float32, [None, input_dimensions], name='X_train')
 y_train_node = tf.placeholder(tf.float32, [None, output_dimensions], name='y_train')
 
-# We will use these as inputs to the model once it comes time to eval it
-X_val_node = tf.constant(raw_X_val, name='X_val')
-y_val_node = tf.constant(raw_y_val, name='y_val')
-
 # We will use these as inputs to the model once it comes time to test it
 X_test_node = tf.constant(raw_X_test, name='X_test')
 y_test_node = tf.constant(raw_y_test, name='y_test')
@@ -58,25 +54,34 @@ y_test_node = tf.constant(raw_y_test, name='y_test')
 weight_1_node = tf.Variable(tf.zeros([input_dimensions, num_layer_1_cells]), name='weight_1')
 biases_1_node = tf.Variable(tf.zeros([num_layer_1_cells]), name='biases_1')
 
+# Third layer takes in input from 2nd layer and outputs [1 0] or [0 1] depending on fraud vs legit
 weight_2_node = tf.Variable(tf.zeros([num_layer_1_cells, output_dimensions]), name='weight_2')
 biases_2_node = tf.Variable(tf.zeros([output_dimensions]), name='biases_2')
 
 
+# Function to run an input tensor through the 3 layers and output a tensor that will give us a fraud/legit result
+# Each layer uses a different function to fit lines through the data and predict whether a given input tensor will \
+#   result in a fraudulent or legitimate transaction
 def network(input_tensor):
     layer1 = tf.nn.sigmoid(tf.matmul(input_tensor, weight_1_node) + biases_1_node)
     layer2 = tf.matmul(layer1, weight_2_node) + biases_2_node
     return layer2
 
 
+# Used to predict what results will be given training or testing input data
+# Remember, X_train_node is just a placeholder for now. We will enter values at run time
 y_train_prediction = network(X_train_node)
 y_test_prediction = network(X_test_node)
 
+# Cross entropy loss function measures differences between actual output and predicted output
 mean_squared_error = tf.losses.mean_squared_error(y_train_node, y_train_prediction)
 
-# TODO: follow paper
-optimizer = tf.train.AdagradOptimizer(0.005).minimize(mean_squared_error)
+# Adam optimizer function will try to minimize loss (cross_entropy) but changing the 3 layers' variable values at a
+#   learning rate of 0.005
+optimizer = tf.train.AdamOptimizer(0.005).minimize(mean_squared_error)
 
 num_epochs = 100
+
 
 with tf.Session() as session:
     tf.global_variables_initializer().run()
