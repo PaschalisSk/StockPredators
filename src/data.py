@@ -23,7 +23,7 @@ class Data:
             location (str): The location to save the df
             **kwargs (): Additional kwargs to pass in to_csv
         """
-        # '../Data/Trends/' + trend + '.' +
+        # '../data/Trends/' + trend + '.' +
         # START_DATE.strftime('%Y-%m-%d') + '.' +
         # END_DATE.strftime('%Y-%m-%d') + '.csv',
         #                 index_label='date', date_format='%Y-%m-%d',

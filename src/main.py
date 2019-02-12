@@ -1,14 +1,13 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
-import time
 
 import data
 
 # Initialise random state
 R_STATE = np.random.RandomState(0)
 # Define the stocks file we want to read
-STOCK_FILE = '../Data/Stocks/MSFT.2013-12-31.2018-12-31.csv'
+STOCK_FILE = '../data/stocks/MSFT.2013-12-31.2018-12-31.csv'
 
 # Read the stocks csv into a dataframe
 stock = data.Stocks(STOCK_FILE)

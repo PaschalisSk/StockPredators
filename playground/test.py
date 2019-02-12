@@ -1,7 +1,6 @@
 import numpy as np
 import tensorflow as tf
 import time
-import pandas as pd
 import data
 
 # Initialise random state
