@@ -246,6 +246,7 @@ class Stocks(Data):
             days (int): Days over which to calculate relative strength index
         """
         # TA.SMA has min_periods=days-1 for some reason
+        # Changed it to min_periods=days
         self.df['MA'] = TA.SMA(self.df, days)
         # Equal to my implementation
         self.df['WMA'] = TA.WMA(self.df, days)
@@ -260,8 +261,10 @@ class Stocks(Data):
         # They used ewm, changed it to simple rolling
         # They also had ohlc['close'].diff()[1:] which resulted in returning
         # one less row
+        # Changed min periods
         self.df['RSI'] = TA.RSI(self.df, days)
         # TODO: What do they mean in the paper
+        # Changed min periods
         self.df['MACD'] = TA.MACD(self.df, signal=days)['SIGNAL']
         self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days)
         self.df['ADL'] = TA.ADL(self.df)
@@ -271,9 +274,12 @@ class Stocks(Data):
         self.df['MA'] = self.df['MA'].shift()
         self.df['WMA'] = self.df['WMA'].shift()
         self.df['MOM'] = self.df['MOM'].shift()
-        self.df['SO_K'] = self.df['SO_K'].shift()
-        self.df['SO_D'] = self.df['SO_D'].shift()
-        self.df['RSI'] = self.df['RSI'].shift()
+        self.df['STOCH'] = self.df['STOCH'].shift()
+        self.df['STOCHD'] = self.df['STOCHD'].shift()
+        self.df['MACD'] = self.df['MACD'].shift()
+        self.df['WILLIAMS'] = self.df['WILLIAMS'].shift()
+        self.df['ADL'] = self.df['ADL'].shift()
+        self.df['CCI'] = self.df['CCI'].shift()
         # Drop rows with nan
         self.df.dropna(inplace=True)
         # Drop columns we don't need

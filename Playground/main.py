@@ -1,4 +1,5 @@
 import numpy as np
+from tensorflow import keras
 import tensorflow as tf
 import time
 
@@ -12,9 +13,12 @@ STOCK_FILE = '../Data/Stocks/MSFT.2013-12-31.2018-12-31.csv'
 # Read the stocks csv into a dataframe
 stock = data.Stocks(STOCK_FILE)
 stock.calc_patel_TI(10)
-stock.normalize()
+#stock.normalize()
 stock.shuffle(R_STATE)
 
+# KERAS IMPLEMENTATION
+#model = keras.Sequential()
+# TF IMPLEMENTATION
 # df_X holds the technical indicators
 df_X = stock.df.drop(['close'], axis=1)
 # df_y holds the closing prices
