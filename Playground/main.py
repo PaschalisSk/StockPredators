@@ -1,6 +1,6 @@
 import numpy as np
-from tensorflow import keras
 import tensorflow as tf
+from tensorflow.keras import layers
 import time
 
 import data
@@ -16,9 +16,6 @@ stock.calc_patel_TI(10)
 #stock.normalize()
 stock.shuffle(R_STATE)
 
-# KERAS IMPLEMENTATION
-#model = keras.Sequential()
-# TF IMPLEMENTATION
 # df_X holds the technical indicators
 df_X = stock.df.drop(['close'], axis=1)
 # df_y holds the closing prices
@@ -46,55 +43,15 @@ output_dimensions = ar_y.shape[1]
 # 100 cells for the 1st layer
 num_layer_1_cells = 100
 
-# We will use these as inputs to the model when it comes time to train it (assign values at run time)
-X_train_node = tf.placeholder(tf.float32, [None, input_dimensions], name='X_train')
-y_train_node = tf.placeholder(tf.float32, [None, output_dimensions], name='y_train')
+model = tf.keras.Sequential()
+model.add(layers.Dense(num_layer_1_cells, input_shape=(input_dimensions,),
+                       activation='sigmoid'))
+model.add(layers.Dense(output_dimensions, activation='linear'))
+model.compile(optimizer=tf.train.AdagradOptimizer(0.005),
+              loss='mse',
+              metrics=['mse'])
 
-# We will use these as inputs to the model once it comes time to eval it
-X_val_node = tf.constant(raw_X_val, name='X_val')
-y_val_node = tf.constant(raw_y_val, name='y_val')
-
-# We will use these as inputs to the model once it comes time to test it
-X_test_node = tf.constant(raw_X_test, name='X_test')
-y_test_node = tf.constant(raw_y_test, name='y_test')
-
-# First layer takes in input and passes output to 2nd layer
-weight_1_node = tf.Variable(tf.zeros([input_dimensions, num_layer_1_cells]), name='weight_1')
-biases_1_node = tf.Variable(tf.zeros([num_layer_1_cells]), name='biases_1')
-
-weight_2_node = tf.Variable(tf.zeros([num_layer_1_cells, output_dimensions]), name='weight_2')
-biases_2_node = tf.Variable(tf.zeros([output_dimensions]), name='biases_2')
-
-
-def network(input_tensor):
-    layer1 = tf.nn.sigmoid(tf.matmul(input_tensor, weight_1_node) + biases_1_node)
-    layer2 = tf.matmul(layer1, weight_2_node) + biases_2_node
-    return layer2
-
-
-y_train_prediction = network(X_train_node)
-y_test_prediction = network(X_test_node)
-
-mean_squared_error = tf.losses.mean_squared_error(y_train_node, y_train_prediction)
-
-# TODO: follow paper
-optimizer = tf.train.AdagradOptimizer(0.005).minimize(mean_squared_error)
-
-num_epochs = 100
-
-with tf.Session() as session:
-    tf.global_variables_initializer().run()
-    for epoch in range(num_epochs):
-
-        start_time = time.time()
-
-        _, cross_entropy_score = session.run([optimizer, mean_squared_error],
-                                             feed_dict={X_train_node: raw_X_train, y_train_node: raw_y_train})
-
-        if epoch % 10 == 0:
-            timer = time.time() - start_time
-
-            print('Epoch: {}'.format(epoch), 'Current loss: {0:.4f}'.format(cross_entropy_score),
-                  'Elapsed time: {0:.2f} seconds'.format(timer))
+model.fit(raw_X_train, raw_y_train, epochs=100, batch_size=32, verbose=2,
+          validation_data=(raw_X_val, raw_y_val))
 
 print('test')
