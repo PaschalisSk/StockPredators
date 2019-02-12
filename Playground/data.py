@@ -6,9 +6,6 @@ import os
 import pandas_datareader.data as web
 from finta import TA
 
-from utils import get_sliding_window
-
-
 class Data:
     def __init__(self, source=None):
         """
@@ -19,14 +16,6 @@ class Data:
             self.df = pd.read_csv(source, index_col='date')
         else:
             self.df = None
-
-    # def create_np_array(self, column, **kwargs):
-    #     """ Create a numpy array from one dataframe column.
-    #     Args:
-    #         column (str): The name of the column we want to turn into an array
-    #         **kwargs (): Additional kwargs to pass in to_numpy method
-    #     """
-    #     self.np_array = self.raw_df[column].to_numpy(kwargs)
 
     def save_df(self, location, **kwargs):
         """ Save the dataframe.
@@ -151,94 +140,6 @@ class Stocks(Data):
         self.df = web.DataReader(kw, 'av-daily',
                                  start=start_date, end=end_date,
                                  access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
-
-    # def MA(self, days):
-    #     """ Add column to df with moving average over n days
-    #     Args:
-    #         days (int): Days over which to calculate MA
-    #     Returns:
-    #         The added column
-    #     """
-    #     self.df['MA'] = self.df['close'].rolling(days).mean()
-    #     return self.df['MA']
-    #
-    # def WMA(self, days):
-    #     """ Add column to df with weighted moving average
-    #         over n days
-    #     Args:
-    #         days (int): Days over which to calculate weighted MA
-    #     Returns:
-    #         The added column
-    #     """
-    #     # The kwargs for np.average
-    #     kwargs = {'weights': list(range(1, days+1))}
-    #     self.df['WMA'] = self.df['close'].rolling(days).apply(np.average,
-    #                                                           raw=True,
-    #                                                           kwargs=kwargs)
-    #     return self.df['WMA']
-    #
-    # def MOM(self, days):
-    #     """ Add column to df with momentum for closing price over n days
-    #     Args:
-    #         days (int): Days over which to calculate weighted MOM
-    #     Returns:
-    #         The added column
-    #     """
-    #     self.df['MOM'] = self.df['close'].rolling(days+1).apply(
-    #         lambda x: x[days] - x[0], raw=True)
-    #     return self.df['MOM']
-    #
-    # def SO_K(self, days):
-    #     """ Add column to df %K over n days
-    #     Args:
-    #         days (int): Days over which to calculate %K
-    #     Returns:
-    #         The added column
-    #     """
-    #     slided_df = get_sliding_window(self.df, days)
-    #
-    #     close_idx = self.df.columns.get_loc('close')
-    #     high_idx = self.df.columns.get_loc('high')
-    #     low_idx = self.df.columns.get_loc('low')
-    #
-    #     def SO_K(w):
-    #         return (w[-1, close_idx] - w[:, low_idx].min()) / (
-    #                       w[:, high_idx].max() - w[:, low_idx].min()) * 100
-    #
-    #     SO_K_list = [np.nan]*(days-1)
-    #     self.df['SO_K'] = SO_K_list + [SO_K(w) for w in slided_df]
-    #     return self.df['SO_K']
-    #
-    # def SO_D(self, days):
-    #     """ Add column to df %D over n days
-    #     Args:
-    #         days (int): Days over which to calculate %D
-    #     Returns:
-    #         The added column
-    #     """
-    #     self.df['SO_D'] = self.df['SO_K'].rolling(days).mean()
-    #     return self.df['SO_D']
-    #
-    # def RSI(self, days):
-    #     """ Add column to df with relative strength index over n days
-    #     Args:
-    #         days (int): Days over which to calculate relative strength index
-    #     Returns:
-    #         The added column
-    #     """
-    #     def RS(close):
-    #         gain_sum = 0
-    #         loss_sum = 0
-    #         for i in range(1, len(close)):
-    #             if close[i-1] < close[i]:
-    #                 gain_sum += close[i] - close[i-1]
-    #             else:
-    #                 loss_sum += close[i-1] - close[i]
-    #         return gain_sum/loss_sum
-    #
-    #     self.df['RSI'] = self.df['close'].rolling(days + 1).apply(
-    #         lambda x: 100 - 100/(1 + RS(x)), raw=True)
-    #     return self.df['RSI']
 
     def calc_patel_TI(self, days):
         """ Calculate the technical indicators from Patel et. al. for n days
