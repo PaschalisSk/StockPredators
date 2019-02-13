@@ -141,49 +141,51 @@ class Stocks(Data):
                                  start=start_date, end=end_date,
                                  access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
 
-    def calc_patel_TI(self, days):
+    def calc_patel_TI(self, days_back, days_forward):
         """ Calculate the technical indicators from Patel et. al. for n days
         Args:
-            days (int): Days over which to calculate relative strength index
+            days_back (int): Days in the past over which to
+                calculate relative strength index
+            days_forward (int): Days in the future to predict
         """
         # TA.SMA has min_periods=days-1 for some reason
         # Changed it to min_periods=days
-        self.df['MA'] = TA.SMA(self.df, days)
+        self.df['MA'] = TA.SMA(self.df, days_back)
         # Equal to my implementation
-        self.df['WMA'] = TA.WMA(self.df, days)
+        self.df['WMA'] = TA.WMA(self.df, days_back)
         # Equal
-        self.df['MOM'] = TA.MOM(self.df, days)
+        self.df['MOM'] = TA.MOM(self.df, days_back)
         # Had highest_high - ohlc['close']
         # After changing they are equal
-        self.df['STOCH'] = TA.STOCH(self.df, days)
+        self.df['STOCH'] = TA.STOCH(self.df, days_back)
         # They didn't have period when calling STOCH, instead it was used for 3
         # STOCHD is actually the mean over 3 days
-        self.df['STOCHD'] = TA.STOCHD(self.df, days)
+        self.df['STOCHD'] = TA.STOCHD(self.df, days_back)
         # They used ewm, changed it to simple rolling
         # They also had ohlc['close'].diff()[1:] which resulted in returning
         # one less row
         # Changed min periods
-        self.df['RSI'] = TA.RSI(self.df, days)
+        self.df['RSI'] = TA.RSI(self.df, days_back)
         # TODO: What do they mean in the paper
         # Changed min periods
-        self.df['MACD'] = TA.MACD(self.df, signal=days)['SIGNAL']
-        self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days)
+        self.df['MACD'] = TA.MACD(self.df, signal=days_back)['SIGNAL']
+        self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days_back)
         self.df['ADL'] = TA.ADL(self.df)
-        self.df['CCI'] = TA.CCI(self.df, days)
+        self.df['CCI'] = TA.CCI(self.df, days_back)
+        # Drop columns we no longer need
+        self.df.drop(['open', 'high', 'low', 'volume'], axis=1, inplace=True)
         # Since to predict close price of day n we need the indicators
-        # of day n-1 we move the above columns one index to the bottom
-        self.df['MA'] = self.df['MA'].shift()
-        self.df['WMA'] = self.df['WMA'].shift()
-        self.df['MOM'] = self.df['MOM'].shift()
-        self.df['STOCH'] = self.df['STOCH'].shift()
-        self.df['STOCHD'] = self.df['STOCHD'].shift()
-        self.df['MACD'] = self.df['MACD'].shift()
-        self.df['WILLIAMS'] = self.df['WILLIAMS'].shift()
-        self.df['ADL'] = self.df['ADL'].shift()
-        self.df['CCI'] = self.df['CCI'].shift()
+        # of day n-1 we move the above columns days_forward to the bottom
+        self.df['MA'] = self.df['MA'].shift(days_forward)
+        self.df['WMA'] = self.df['WMA'].shift(days_forward)
+        self.df['MOM'] = self.df['MOM'].shift(days_forward)
+        self.df['STOCH'] = self.df['STOCH'].shift(days_forward)
+        self.df['STOCHD'] = self.df['STOCHD'].shift(days_forward)
+        self.df['MACD'] = self.df['MACD'].shift(days_forward)
+        self.df['WILLIAMS'] = self.df['WILLIAMS'].shift(days_forward)
+        self.df['ADL'] = self.df['ADL'].shift(days_forward)
+        self.df['CCI'] = self.df['CCI'].shift(days_forward)
         # Drop rows with nan
         self.df.dropna(inplace=True)
-        # Drop columns we don't need
-        self.df.drop(['open', 'high', 'low', 'volume'], axis=1, inplace=True)
 
 

@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import layers
+from keras import *
 
 import data
 
@@ -11,7 +11,7 @@ STOCK_FILE = '../data/stocks/MSFT.2013-12-31.2018-12-31.csv'
 
 # Read the stocks csv into a dataframe
 stock = data.Stocks(STOCK_FILE)
-stock.calc_patel_TI(10)
+stock.calc_patel_TI(10, 1)
 #stock.normalize()
 stock.shuffle(R_STATE)
 
@@ -42,15 +42,27 @@ output_dimensions = ar_y.shape[1]
 # 100 cells for the 1st layer
 num_layer_1_cells = 100
 
-model = tf.keras.Sequential()
-model.add(layers.Dense(num_layer_1_cells, input_shape=(input_dimensions,),
-                       activation='sigmoid'))
+# Create the model
+model = Sequential()
+# Add first hidden layer
+model.add(layers.Dense(num_layer_1_cells,
+                             input_shape=(input_dimensions,),
+                             activation='sigmoid'))
+# Add output layer
 model.add(layers.Dense(output_dimensions, activation='linear'))
+
 model.compile(optimizer=tf.train.AdagradOptimizer(0.005),
               loss='mse',
               metrics=['mse'])
 
-model.fit(raw_X_train, raw_y_train, epochs=100, batch_size=32, verbose=2,
+callbacks = [callbacks.CSVLogger('../logs/training.csv'),
+             callbacks.EarlyStopping(monitor='val_loss', patience=2),
+             callbacks.ModelCheckpoint(filepath='../models/best_model.h5',
+                                       monitor='val_loss',
+                                       save_best_only=True)]
+
+model.fit(raw_X_train, raw_y_train, epochs=3000, batch_size=32, verbose=2,
+          callbacks=callbacks,
           validation_data=(raw_X_val, raw_y_val))
 
 print('test')
