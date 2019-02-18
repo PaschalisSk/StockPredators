@@ -193,7 +193,7 @@ class Stocks(Data):
         self.df['RSI'] = TA.RSI(self.df, days_back)
         # TODO: What do they mean in the paper
         # Changed min periods
-        self.df['MACD'] = TA.MACD(self.df, signal=days_back)['SIGNAL']
+        self.df['MACD'] = TA.MACD(self.df, signal=days_back)['MACD']
         self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days_back)
         self.df['ADL'] = TA.ADL(self.df)
         self.df['CCI'] = TA.CCI(self.df, days_back)
