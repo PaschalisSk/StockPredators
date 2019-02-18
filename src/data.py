@@ -5,6 +5,8 @@ from pytrends.request import TrendReq
 import os
 import pandas_datareader.data as web
 from finta import TA
+from sklearn.preprocessing import MinMaxScaler
+
 
 class Data:
     def __init__(self, source=None):
@@ -17,18 +19,17 @@ class Data:
         else:
             self.df = None
 
+        self.scaler = MinMaxScaler()
+
     def save_df(self, location, **kwargs):
         """ Save the dataframe.
         Args:
             location (str): The location to save the df
             **kwargs (): Additional kwargs to pass in to_csv
         """
-        # '../data/Trends/' + trend + '.' +
-        # START_DATE.strftime('%Y-%m-%d') + '.' +
-        # END_DATE.strftime('%Y-%m-%d') + '.csv',
-        #                 index_label='date', date_format='%Y-%m-%d',
-        #                 float_format='%.2f'
-        self.df.to_csv(location, kwargs)
+        self.df.to_csv(location, kwargs,
+                       index_label='date', date_format='%Y-%m-%d',
+                       float_format='%.2f')
 
     def shuffle(self, random_state=None):
         """Randomly shuffle the rows of our data
@@ -41,30 +42,54 @@ class Data:
         else:
             self.df = self.df.sample(frac=1)
 
-    def normalize(self):
-        self.df = (self.df - self.df.min())/(self.df.max() - self.df.min())
-    #
-    # def create_sets(self):
-    #     """Creates 6 sets of shuffled data for training(70%),
-    #     for validation(15%) and for testing(15%).
-    #     """
-    #     self.reshape()
-    #     self.shuffle()
-    #
-    #     # Get the indices of the sections we want to split the array
-    #     sections = np.array([self.data.shape[0] * 70 // 100,
-    #                          self.data.shape[0] * 85 // 100])
-    #
-    #     # Split the rows in chunks of 70%, 15% and 15%
-    #     training, validation, testing = np.vsplit(self.data, sections)
-    #
-    #     # Separate inputs from targets
-    #     self.X_shuffle_train = training[:, :20]
-    #     self.y_shuffle_train = training[:, -1:]
-    #     self.X_shuffle_val = validation[:, :20]
-    #     self.y_shuffle_val = validation[:, -1:]
-    #     self.X_shuffle_test = testing[:, :20]
-    #     self.y_shuffle_test = testing[:, -1:]
+    def raw_values(self, dataset=None, norm=False):
+        """ Returns dictionary with keys X and y and values numpy arrays
+        Args:
+            dataset (str): One of train, val, test
+            norm (bool): Normalised or not
+        Returns:
+            raw_values (dict): Dictionary of raw values with keys X and y
+        """
+        raw_values = self.df.values
+        if norm is True:
+            raw_values = self.scaler.fit_transform(raw_values)
+
+        # First 70% training
+        train_limit = int(0.7 * len(raw_values))
+        # 70%-85% validation
+        val_limit = int(0.85 * len(raw_values))
+
+        if dataset == 'train':
+            raw_values = raw_values[:train_limit]
+        elif dataset == 'val':
+            raw_values = raw_values[train_limit:val_limit]
+        elif dataset == 'test':
+            raw_values = raw_values[val_limit:]
+
+        y_index = self.df.columns.get_loc('close')
+
+        return {'X': np.delete(raw_values, y_index, axis=1),
+                'y': raw_values[:, y_index][:, np.newaxis]}
+
+    def denorm_predictions(self, predictions):
+        """ Scales predictions back to normal
+        Args:
+            predictions (numpy array): 1D numpy array of predictions
+        Returns:
+            numpy array of normalised predictions
+        """
+        # Create a numpy array similar to the test set but with the predictions
+        # instead of the true y values and then inverse_transform
+        norm_values = self.scaler.transform(self.df.values)
+        val_limit = int(0.85 * len(norm_values))
+        norm_test_values = norm_values[val_limit:]
+        y_index = self.df.columns.get_loc('close')
+        # Replace the true y values with the predicted ones
+        # Had to make (184, 1) shape to (184)
+        norm_test_values[:, y_index] = predictions[:, 0]
+
+        denorm_test_values = self.scaler.inverse_transform(norm_test_values)
+        return denorm_test_values[:, y_index]
 
 
 class Trends(Data):

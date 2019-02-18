@@ -1,2 +1,7 @@
 .idea/*
+
 code/__pycache__/*
+
+models/*
+report/*
+graphs/*
