@@ -21,15 +21,13 @@ class Data:
 
         self.scaler = MinMaxScaler()
 
-    def save_df(self, location, **kwargs):
+    def save_df(self, location):
         """ Save the dataframe.
         Args:
             location (str): The location to save the df
-            **kwargs (): Additional kwargs to pass in to_csv
         """
-        self.df.to_csv(location, kwargs,
-                       index_label='date', date_format='%Y-%m-%d',
-                       float_format='%.2f')
+        self.df.to_csv(location, index_label='date',
+                       date_format='%Y-%m-%d', float_format='%.2f')
 
     def shuffle(self, random_state=None):
         """Randomly shuffle the rows of our data
@@ -89,7 +87,7 @@ class Data:
         norm_test_values[:, y_index] = predictions[:, 0]
 
         denorm_test_values = self.scaler.inverse_transform(norm_test_values)
-        return denorm_test_values[:, y_index]
+        return denorm_test_values[:, y_index][:, np.newaxis]
 
 
 class Trends(Data):
