@@ -69,6 +69,20 @@ class Data:
         return {'X': np.delete(raw_values, y_index, axis=1),
                 'y': raw_values[:, y_index][:, np.newaxis]}
 
+    def raw_values_lstm_wrapper(self, dataset=None, norm=False,
+                                timesteps=1):
+        raw_vals = self.raw_values(dataset, norm)
+
+        X = raw_vals['X']
+        lstm_X = np.empty((X.shape[0], X.shape[0] - timesteps))
+        # s = (X.shape[0] - timesteps + 1,) + (X.shape[1] - X.shape[1] + 1,) + (timesteps, X.shape[1])
+        # strides = X.strides + X.strides
+        # lstm_X = np.lib.stride_tricks.as_strided(X, shape=s, strides=strides)
+        # lstm_X = raw_vals['X'].reshape((raw_vals['X'].shape[0],
+        #                                 timesteps,
+        #                                 raw_vals['X'].shape[1]))
+        return {'X': lstm_X, 'y': raw_vals['y']}
+
     def denorm_predictions(self, predictions):
         """ Scales predictions back to normal
         Args:
@@ -164,50 +178,59 @@ class Stocks(Data):
                                  start=start_date, end=end_date,
                                  access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
 
-    def calc_patel_TI(self, days_back, days_forward):
+    def calc_patel_TI(self, days):
         """ Calculate the technical indicators from Patel et. al. for n days
+            in the past
         Args:
-            days_back (int): Days in the past over which to
+            days (int): Days in the past over which to
                 calculate relative strength index
-            days_forward (int): Days in the future to predict
         """
         # TA.SMA has min_periods=days-1 for some reason
         # Changed it to min_periods=days
-        self.df['MA'] = TA.SMA(self.df, days_back)
+        self.df['MA'] = TA.SMA(self.df, days)
         # Equal to my implementation
-        self.df['WMA'] = TA.WMA(self.df, days_back)
+        self.df['WMA'] = TA.WMA(self.df, days)
         # Equal
-        self.df['MOM'] = TA.MOM(self.df, days_back)
+        self.df['MOM'] = TA.MOM(self.df, days)
         # Had highest_high - ohlc['close']
         # After changing they are equal
-        self.df['STOCH'] = TA.STOCH(self.df, days_back)
+        self.df['STOCH'] = TA.STOCH(self.df, days)
         # They didn't have period when calling STOCH, instead it was used for 3
         # STOCHD is actually the mean over 3 days
-        self.df['STOCHD'] = TA.STOCHD(self.df, days_back)
+        self.df['STOCHD'] = TA.STOCHD(self.df, days)
         # They used ewm, changed it to simple rolling
         # They also had ohlc['close'].diff()[1:] which resulted in returning
         # one less row
         # Changed min periods
-        self.df['RSI'] = TA.RSI(self.df, days_back)
+        self.df['RSI'] = TA.RSI(self.df, days)
         # TODO: What do they mean in the paper
         # Changed min periods
-        self.df['MACD'] = TA.MACD(self.df, signal=days_back)['MACD']
-        self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days_back)
+        self.df['MACD'] = TA.MACD(self.df, signal=days)['MACD']
+        self.df['WILLIAMS'] = TA.WILLIAMS(self.df, days)
         self.df['ADL'] = TA.ADL(self.df)
-        self.df['CCI'] = TA.CCI(self.df, days_back)
+        self.df['CCI'] = TA.CCI(self.df, days)
         # Drop columns we no longer need
         self.df.drop(['open', 'high', 'low', 'volume'], axis=1, inplace=True)
+        # Drop rows with nan
+        self.df.dropna(inplace=True)
+
+    def shift(self, days):
+        """ Shifts the features in order to predict the n forward days
+            with the features of n days in the past
+        Args:
+            days (int): The number of days in the future we are predicting
+        """
         # Since to predict close price of day n we need the indicators
         # of day n-1 we move the above columns days_forward to the bottom
-        self.df['MA'] = self.df['MA'].shift(days_forward)
-        self.df['WMA'] = self.df['WMA'].shift(days_forward)
-        self.df['MOM'] = self.df['MOM'].shift(days_forward)
-        self.df['STOCH'] = self.df['STOCH'].shift(days_forward)
-        self.df['STOCHD'] = self.df['STOCHD'].shift(days_forward)
-        self.df['MACD'] = self.df['MACD'].shift(days_forward)
-        self.df['WILLIAMS'] = self.df['WILLIAMS'].shift(days_forward)
-        self.df['ADL'] = self.df['ADL'].shift(days_forward)
-        self.df['CCI'] = self.df['CCI'].shift(days_forward)
+        self.df['MA'] = self.df['MA'].shift(days)
+        self.df['WMA'] = self.df['WMA'].shift(days)
+        self.df['MOM'] = self.df['MOM'].shift(days)
+        self.df['STOCH'] = self.df['STOCH'].shift(days)
+        self.df['STOCHD'] = self.df['STOCHD'].shift(days)
+        self.df['MACD'] = self.df['MACD'].shift(days)
+        self.df['WILLIAMS'] = self.df['WILLIAMS'].shift(days)
+        self.df['ADL'] = self.df['ADL'].shift(days)
+        self.df['CCI'] = self.df['CCI'].shift(days)
         # Drop rows with nan
         self.df.dropna(inplace=True)
 

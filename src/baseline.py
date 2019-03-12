@@ -1,12 +1,52 @@
 import keras as K
 from sacred import Experiment
 from sacred.observers import MongoObserver
+from sklearn.model_selection import ParameterGrid
 
 import data
 import metrics
 
-ex = Experiment('baseline')
+ex = Experiment('baseline_new_dir')
 ex.observers.append(MongoObserver.create())
+
+# config to check for batch size
+# config_options = {
+#     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
+#     'days_back': [10],
+#     'days_forward': [1],
+#     'max_epochs': [10000],
+#     'early_stopping_threshold': [20],
+#     'num_neurons': [100],
+#     'num_hidden_layers': [1],
+#     'seed': [0, 1, 2],
+#     'learning_rate': [0.005],
+#     'batch_size': [8, 16, 32],
+#     'activation': ['sigmoid'],
+#     'optimizer': ['adagrad'],
+#     'kernel_init': ['glorot_uniform'],
+#     'regularization': [None],
+#     'loss': ['MSE']
+# }
+
+config_options = {
+    'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
+    'days_back': [5, 10],
+    'days_forward': [1, 5, 10],
+    'max_epochs': [5000],
+    'early_stopping_threshold': [20],
+    'num_neurons': [50, 100, 150],
+    'num_hidden_layers': [1],
+    'seed': [0, 1, 2],
+    'learning_rate': [0.005, 0.01],
+    'batch_size': [16],
+    'activation': ['sigmoid'],
+    'optimizer': ['adagrad'],
+    'kernel_init': ['glorot_uniform'],
+    'regularization': [None],
+    'loss': ['MSE']
+}
+
+config_combinations = list(ParameterGrid(config_options))
 
 
 @ex.main
@@ -16,7 +56,8 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
          kernel_init, regularization, loss):
     # Read the stocks csv into a dataframe
     stock = data.Stocks(stock_file)
-    stock.calc_patel_TI(days_back, days_forward)
+    stock.calc_patel_TI(days_back)
+    stock.shift(days_forward)
     # stock.shuffle(seed)
     # The input dim is equal to the number of technical indicators we use
     input_dimensions = stock.raw_values()['X'].shape[1]
@@ -61,8 +102,10 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
     # Define Direction Accuracy metric
     def direction_accuracy(y_true, y_pred):
         # sign returns either -1 (if <0), 0 (if ==0), or 1 (if >0)
-        true_signs = K.backend.sign(y_true[1:] - y_true[:-1])
-        pred_signs = K.backend.sign(y_pred[1:] - y_true[:-1])
+        true_signs = K.backend.sign(y_true[days_forward:] -
+                                    y_true[:-days_forward])
+        pred_signs = K.backend.sign(y_pred[days_forward:] -
+                                    y_true[:-days_forward])
 
         equal_signs = K.backend.equal(true_signs, pred_signs)
         return K.backend.mean(equal_signs, axis=-1)
@@ -147,7 +190,7 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
         'test_mean_squared_error': metrics.mean_squared_error(
             y_true, y_pred),
         'test_direction_accuracy': metrics.direction_accuracy(
-            y_true, y_pred)
+            y_true, y_pred, days_forward)
     }
 
     # Save the metrics

@@ -25,10 +25,10 @@ def root_mean_squared_relative_error(y_true, y_pred):
     return np.sqrt(mean_squared_relative_error)
 
 
-def direction_accuracy(y_true, y_pred):
+def direction_accuracy(y_true, y_pred, days_forward):
     # sign returns either -1 (if <0), 0 (if ==0), or 1 (if >0)
-    true_signs = np.sign(y_true[1:] - y_true[:-1])
-    pred_signs = np.sign(y_pred[1:] - y_true[:-1])
+    true_signs = np.sign(y_true[days_forward:] - y_true[:-days_forward])
+    pred_signs = np.sign(y_pred[days_forward:] - y_true[:-days_forward])
 
     equal_signs = np.equal(true_signs, pred_signs)
     return np.mean(equal_signs)
