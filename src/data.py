@@ -235,3 +235,17 @@ class Stocks(Data):
         self.df.dropna(inplace=True)
 
 
+class Twitter(Data):
+
+    def download(self, hashtag, start_date, end_date):
+        """
+        Args:
+            kw (str): the hashtag for which to get Twitter data
+            start_date (:obj:'datetime'): The start date for the data
+            end_date (:obj:'datetime'): The end date for the data
+        """
+        self.df = web.DataReader(hashtag, 'av-daily',
+                                 start=start_date, end=end_date,
+                                 access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
+
+
