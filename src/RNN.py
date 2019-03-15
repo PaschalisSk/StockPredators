@@ -40,15 +40,15 @@ def main(_run, stock_file, days_back, days_forward):
     # Create the model
     model = K.Sequential()
 
-    timesteps=1
+    timesteps=5
     # The data dim is equal to the number of technical indicators we use
     data_dim = stock.raw_values()['X'].shape[1]
-    model.add(K.layers.LSTM(10, input_shape=(timesteps, data_dim)))
+    model.add(K.layers.LSTM(128, input_shape=(timesteps, data_dim)))
     model.add(K.layers.Dense(1))
     model.compile(loss='MSE', optimizer='adagrad')
 
     callbacks_list = [K.callbacks.EarlyStopping(monitor='val_loss',
-                                                patience=30),
+                                                patience=20),
                       K.callbacks.ModelCheckpoint(
                           filepath='../models/best_model.h5',
                           monitor='val_loss',
@@ -82,7 +82,8 @@ def main(_run, stock_file, days_back, days_forward):
     y_pred = stock.denorm_predictions(y_pred_norm)
 
     # Calculate the unnormalized metrics
-    y_true = stock.raw_values_lstm_wrapper(dataset='test')['y']
+    y_true = stock.raw_values_lstm_wrapper(dataset='test',
+                                           timesteps=timesteps)['y']
 
     import matplotlib.pyplot as plt
     plt.plot(y_pred, label='pred')

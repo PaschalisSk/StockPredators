@@ -1,3 +1,5 @@
+from collections import deque
+
 import pandas as pd
 import numpy as np
 import datetime
@@ -74,14 +76,15 @@ class Data:
         raw_vals = self.raw_values(dataset, norm)
 
         X = raw_vals['X']
-        lstm_X = np.empty((X.shape[0], X.shape[0] - timesteps))
-        # s = (X.shape[0] - timesteps + 1,) + (X.shape[1] - X.shape[1] + 1,) + (timesteps, X.shape[1])
-        # strides = X.strides + X.strides
-        # lstm_X = np.lib.stride_tricks.as_strided(X, shape=s, strides=strides)
-        # lstm_X = raw_vals['X'].reshape((raw_vals['X'].shape[0],
-        #                                 timesteps,
-        #                                 raw_vals['X'].shape[1]))
-        return {'X': lstm_X, 'y': raw_vals['y']}
+        lstm_X = []
+        prev_timesteps = deque(maxlen=timesteps)
+
+        for row in X:
+            prev_timesteps.append(row)
+            if len(prev_timesteps) == timesteps:
+                lstm_X.append(np.array(prev_timesteps))
+
+        return {'X': np.array(lstm_X), 'y': raw_vals['y'][timesteps-1:]}
 
     def denorm_predictions(self, predictions):
         """ Scales predictions back to normal
@@ -90,14 +93,12 @@ class Data:
         Returns:
             numpy array of normalised predictions
         """
-        # Create a numpy array similar to the test set but with the predictions
-        # instead of the true y values and then inverse_transform
-        norm_values = self.scaler.transform(self.df.values)
-        val_limit = int(0.85 * len(norm_values))
-        norm_test_values = norm_values[val_limit:]
+        # inverse_transform arg is an array width the same number of columns
+        # as the columns used for the fit_transform
+        norm_test_values = np.zeros((predictions.shape[0],
+                                     self.scaler.data_max_.shape[0]))
+
         y_index = self.df.columns.get_loc('close')
-        # Replace the true y values with the predicted ones
-        # Had to make (184, 1) shape to (184)
         norm_test_values[:, y_index] = predictions[:, 0]
 
         denorm_test_values = self.scaler.inverse_transform(norm_test_values)
