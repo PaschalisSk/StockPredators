@@ -1,13 +1,17 @@
+import datetime
+import os
+import time
 from collections import deque
 
-import pandas as pd
 import numpy as np
-import datetime
-from pytrends.request import TrendReq
-import os
+import pandas as pd
 import pandas_datareader.data as web
-from finta import TA
+import requests
+from dateutil.parser import parse as date_parse
+from pytrends.request import TrendReq
 from sklearn.preprocessing import MinMaxScaler
+
+from finta import TA
 
 
 class Data:
@@ -84,7 +88,7 @@ class Data:
             if len(prev_timesteps) == timesteps:
                 lstm_X.append(np.array(prev_timesteps))
 
-        return {'X': np.array(lstm_X), 'y': raw_vals['y'][timesteps-1:]}
+        return {'X': np.array(lstm_X), 'y': raw_vals['y'][timesteps - 1:]}
 
     def denorm_predictions(self, predictions):
         """ Scales predictions back to normal
@@ -232,21 +236,55 @@ class Stocks(Data):
         self.df['WILLIAMS'] = self.df['WILLIAMS'].shift(days)
         self.df['ADL'] = self.df['ADL'].shift(days)
         self.df['CCI'] = self.df['CCI'].shift(days)
+        if 'sent_trends' in self.df.columns:
+            self.df['sent_trends'] = self.df['sent_trends'].shift(days)
+
         # Drop rows with nan
         self.df.dropna(inplace=True)
 
 
-class Twitter(Data):
+class NYTarticles(Data):
 
-    def download(self, hashtag, start_date, end_date):
+    def download(self, q, start_year, end_year):
         """
         Args:
-            kw (str): the hashtag for which to get Twitter data
-            start_date (:obj:'datetime'): The start date for the data
-            end_date (:obj:'datetime'): The end date for the data
+            q (str): the query for which to get NYT articles
+            start_year (str): The start date for the data
+            end_year (str): The end date for the data
         """
-        self.df = web.DataReader(hashtag, 'av-daily',
-                                 start=start_date, end=end_date,
-                                 access_key=os.getenv('ALPHAVANTAGE_API_KEY'))
+        self.df = pd.DataFrame(columns=['date', 'headline', 'snippet'])
 
+        years = range(int(start_year), int(end_year) + 1)
 
+        for year in years:
+            cur_page = 0
+            max_page = 0
+            while cur_page <= max_page:
+                response = requests.get(
+                    'https://api.nytimes.com/svc/search/v2/articlesearch.json',
+                    params={
+                        'q': q,
+                        'fq': 'pub_year:' + str(
+                            year) + ' AND organizations.contains:microsoft',
+                        'sort': 'oldest',
+                        'page': str(cur_page),
+                        'api-key': os.getenv('NYT_API_KEY')
+                    }
+                )
+                if response.status_code != 200:
+                    print(response.text)
+
+                json = response.json()['response']
+                for doc in json['docs']:
+                    self.df.loc[len(self.df)] = [date_parse(doc['pub_date']),
+                                                 doc['headline']['main'],
+                                                 doc['snippet']]
+                if cur_page == 0:
+                    hits = json['meta']['hits']
+                    max_page = int(hits / 10)
+
+                cur_page += 1
+                # Avoid limit 10req/minute
+                time.sleep(6)
+
+        self.df['date'] = pd.to_datetime(self.df['date'])

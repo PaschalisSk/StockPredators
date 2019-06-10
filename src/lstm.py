@@ -7,10 +7,10 @@ from sklearn.model_selection import ParameterGrid
 import data
 import metrics
 
-ex = Experiment('sent_trends_days_conf_old_params')
-#ex.observers.append(MongoObserver.create())
+ex = Experiment('random_data2')
+ex.observers.append(MongoObserver.create())
 
-# # config to check for batch size 'baseline_batch_size'
+# # config to check for batch size 'lstm_batch_size'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'days_back': [5],
@@ -22,14 +22,15 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'seed': [0, 1, 2],
 #     'learning_rate': [0.001],
 #     'batch_size': [8, 16, 32],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [5]
 # }
 
-# # config to check for conf 'baseline_model_conf'
+# #  config to check for batch size 'lstm_model_conf'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'days_back': [5],
@@ -37,18 +38,19 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'max_epochs': [5000],
 #     'early_stopping_threshold': [20],
 #     'num_neurons': [50, 100, 150],
-#     'num_hidden_layers': [1, 2, 3],
+#     'num_hidden_layers': [1, 2],
 #     'seed': [0, 1, 2],
 #     'learning_rate': [0.01, 0.001, 0.0001],
 #     'batch_size': [16],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adagrad', 'adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [2, 5, 10]
 # }
 
-# # config to check for days ahead, back 'baseline_days_conf'
+# #  config to check for days 'lstm_days_conf'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'days_back': [5, 10],
@@ -56,18 +58,19 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'max_epochs': [5000],
 #     'early_stopping_threshold': [20],
 #     'num_neurons': [150],
-#     'num_hidden_layers': [1],
+#     'num_hidden_layers': [2],
 #     'seed': [0, 1, 2],
-#     'learning_rate': [0.0001],
+#     'learning_rate': [0.001],
 #     'batch_size': [16],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [5]
 # }
 
-# # config to check for batch size 'sent_trends_batch_size'
+# # config to check for batch size 'lstm_sent_trends_batch_size'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'use_sent_and_trends': [True],
@@ -80,14 +83,15 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'seed': [0, 1, 2],
 #     'learning_rate': [0.001],
 #     'batch_size': [8, 16, 32],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [5]
 # }
-#
-# # config to check for conf 'sent_trends_model_conf'
+
+# #  config to check for batch size 'lstm_sent_trends_model_conf'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'use_sent_and_trends': [True],
@@ -96,18 +100,19 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'max_epochs': [5000],
 #     'early_stopping_threshold': [20],
 #     'num_neurons': [50, 100, 150],
-#     'num_hidden_layers': [1, 2, 3],
+#     'num_hidden_layers': [1, 2],
 #     'seed': [0, 1, 2],
 #     'learning_rate': [0.01, 0.001, 0.0001],
 #     'batch_size': [16],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adagrad', 'adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [2, 5, 10]
 # }
 
-# # config to check for conf 'sent_trends_days_conf'
+# #  config to check for batch size 'lstm_sent_trends_days_conf'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'use_sent_and_trends': [True],
@@ -115,38 +120,20 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'days_forward': [1, 5, 10],
 #     'max_epochs': [5000],
 #     'early_stopping_threshold': [20],
-#     'num_neurons': [150],
+#     'num_neurons': [100],
 #     'num_hidden_layers': [1],
 #     'seed': [0, 1, 2],
 #     'learning_rate': [0.01],
 #     'batch_size': [16],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [2]
 # }
 
-# # config to plot baseline, back 'baseline_plot'
-# config_options = {
-#     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
-#     'days_back': [5],
-#     'days_forward': [1],
-#     'max_epochs': [5000],
-#     'early_stopping_threshold': [20],
-#     'num_neurons': [150],
-#     'num_hidden_layers': [1],
-#     'seed': [0],
-#     'learning_rate': [0.0001],
-#     'batch_size': [16],
-#     'activation': ['sigmoid'],
-#     'optimizer': ['adam'],
-#     'kernel_init': ['glorot_uniform'],
-#     'regularization': [None],
-#     'loss': ['MSE']
-# }
-
-# # config to exp plot data 'plot_data_baseline)sent'
+# #  config to export plot data'lstm_sent_plot_run'
 # config_options = {
 #     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
 #     'use_sent_and_trends': [True],
@@ -154,36 +141,76 @@ ex = Experiment('sent_trends_days_conf_old_params')
 #     'days_forward': [1],
 #     'max_epochs': [5000],
 #     'early_stopping_threshold': [20],
-#     'num_neurons': [150],
+#     'num_neurons': [100],
 #     'num_hidden_layers': [1],
 #     'seed': [0],
 #     'learning_rate': [0.01],
 #     'batch_size': [16],
-#     'activation': ['sigmoid'],
+#     'activation': ['tanh'],
 #     'optimizer': ['adam'],
 #     'kernel_init': ['glorot_uniform'],
 #     'regularization': [None],
-#     'loss': ['MSE']
+#     'loss': ['MSE'],
+#     'timesteps': [2]
 # }
-
-# config to check for conf 'sent_trends_days_conf_old_params'
+# #  config to export plot data'lstm_plot_run'
+# config_options = {
+#     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
+#     'days_back': [5],
+#     'days_forward': [1],
+#     'max_epochs': [5000],
+#     'early_stopping_threshold': [20],
+#     'num_neurons': [150],
+#     'num_hidden_layers': [2],
+#     'seed': [0],
+#     'learning_rate': [0.001],
+#     'batch_size': [16],
+#     'activation': ['tanh'],
+#     'optimizer': ['adam'],
+#     'kernel_init': ['glorot_uniform'],
+#     'regularization': [None],
+#     'loss': ['MSE'],
+#     'timesteps': [5]
+# }
+# #  config to export plot data'lstm_sent_trends_days_conf_old_params'
+# config_options = {
+#     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
+#     'use_sent_and_trends': [True],
+#     'days_back': [5,10],
+#     'days_forward': [1, 5, 10],
+#     'max_epochs': [5000],
+#     'early_stopping_threshold': [20],
+#     'num_neurons': [150],
+#     'num_hidden_layers': [2],
+#     'seed': [0, 1, 2],
+#     'learning_rate': [0.001],
+#     'batch_size': [16],
+#     'activation': ['tanh'],
+#     'optimizer': ['adam'],
+#     'kernel_init': ['glorot_uniform'],
+#     'regularization': [None],
+#     'loss': ['MSE'],
+#     'timesteps': [5]
+# }
+#  config to export plot data'random_data'
 config_options = {
     'stock_file': ['../data/stocks/MSFT.2013-12-31.2018-12-31.csv'],
     'use_sent_and_trends': [True],
-    'days_back': [5, 10],
-    'days_forward': [1, 5, 10],
+    'days_back': [5],
+    'days_forward': [1],
     'max_epochs': [5000],
     'early_stopping_threshold': [20],
     'num_neurons': [150],
-    'num_hidden_layers': [1],
+    'num_hidden_layers': [2],
     'seed': [0, 1, 2],
-    'learning_rate': [0.0001],
+    'learning_rate': [0.001],
     'batch_size': [16],
-    'activation': ['sigmoid'],
+    'activation': ['tanh'],
     'optimizer': ['adam'],
     'kernel_init': ['glorot_uniform'],
     'regularization': [None],
-    'loss': ['MSE']
+    'loss': ['MSE'],
+    'timesteps': [5]
 }
 config_combinations = list(ParameterGrid(config_options))
 
@@ -192,7 +219,7 @@ config_combinations = list(ParameterGrid(config_options))
 def main(_run, stock_file, days_back, days_forward, max_epochs,
          early_stopping_threshold, num_neurons, num_hidden_layers,
          seed, learning_rate, batch_size, activation, optimizer,
-         kernel_init, regularization, loss, use_sent_and_trends=False):
+         kernel_init, regularization, loss, timesteps, use_sent_and_trends=False):
     # Read the stocks csv into a dataframe
     stock = data.Stocks(stock_file)
     stock.calc_patel_TI(days_back)
@@ -203,16 +230,13 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
         sent_trends = pd.merge(sentiments, trends, how='left',
                           left_index=True, right_index=True)
         sent_trends['sent_trends'] = sent_trends['sentiment'] * sent_trends['msft']
+        import numpy as np
+        sent_trends['randNumCol'] = np.random.randint(1, 100, sent_trends.shape[0])
         stock.df = pd.merge(stock.df, sent_trends, how='left',
                          left_index=True, right_index=True)
-        stock.df.drop(['sentiment', 'msft'], axis='columns', inplace=True)
+        stock.df.drop(['sentiment', 'msft', 'sent_trends'], axis='columns', inplace=True)
 
     stock.shift(days_forward)
-    # stock.shuffle(seed)
-    # The input dim is equal to the number
-    input_dimensions = stock.raw_values()['X'].shape[1]
-    # The output dim is equal to the number of output numbers, 1 here
-    output_dimensions = stock.raw_values()['y'].shape[1]
 
     # Create the model
     model = K.Sequential()
@@ -223,19 +247,31 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
     else:
         raise NotImplementedError
 
-    # Add first hidden layer
-    model.add(K.layers.Dense(num_neurons,
-                             input_shape=(input_dimensions,),
-                             activation=activation,
-                             kernel_initializer=kernel_initializer))
+    # Add the layers
+    return_sequences = True
+    if num_hidden_layers == 1:
+        return_sequences = False
+    data_dim = stock.raw_values()['X'].shape[1]
+    model.add(K.layers.LSTM(num_neurons,
+                            input_shape=(timesteps, data_dim),
+                            activation=activation,
+                            return_sequences=return_sequences,
+                            kernel_initializer=kernel_initializer))
 
-    # Create the extra layers
-    for _ in range(num_hidden_layers - 1):
-        model.add(K.layers.Dense(num_neurons, activation=activation,
-                                 kernel_initializer=kernel_initializer))
+    for i in range(num_hidden_layers - 1):
+        # If not in the last layer return sequences
+        if i != num_hidden_layers - 2:
+            model.add(K.layers.LSTM(num_neurons,
+                                    activation=activation,
+                                    return_sequences=True,
+                                    kernel_initializer=kernel_initializer))
+        else:
+            model.add(K.layers.LSTM(num_neurons,
+                                    activation=activation,
+                                    kernel_initializer=kernel_initializer))
 
     # Add output layer
-    model.add(K.layers.Dense(output_dimensions, activation='linear',
+    model.add(K.layers.Dense(1, activation='linear',
                              kernel_initializer=kernel_initializer))
 
     # Define Root Mean Squared Relative Error metric
@@ -268,7 +304,6 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
     else:
         raise NotImplementedError
 
-    # Compile the model with the defined optimizers, loss function, and metrics
     model.compile(optimizer=optimizer,
                   loss=loss,
                   metrics=['mean_absolute_percentage_error',
@@ -300,39 +335,48 @@ def main(_run, stock_file, days_back, days_forward, max_epochs,
                           save_best_only=True),
                       metrics_log_callback]
 
-    model.fit(stock.raw_values(dataset='train', norm=True)['X'],
-              stock.raw_values(dataset='train', norm=True)['y'],
+    model.fit(stock.raw_values_lstm_wrapper(dataset='train', norm=True,
+                                            timesteps=timesteps)['X'],
+              stock.raw_values_lstm_wrapper(dataset='train', norm=True,
+                                            timesteps=timesteps)['y'],
               epochs=max_epochs, batch_size=batch_size, verbose=0,
               callbacks=callbacks_list,
-              validation_data=(
-                  stock.raw_values(dataset='val', norm=True)['X'],
-                  stock.raw_values(dataset='val', norm=True)['y'])
+              validation_data=(stock.raw_values_lstm_wrapper(dataset='val',
+                                                             norm=True,
+                                                             timesteps=timesteps)['X'],
+                               stock.raw_values_lstm_wrapper(dataset='val',
+                                                             norm=True,
+                                                             timesteps=timesteps)['y'])
               )
 
     # Calculate metrics for normalized values
-    test_norm_metrics = model.evaluate(stock.raw_values(dataset='test',
-                                                        norm=True)['X'],
-                                       stock.raw_values(dataset='test',
-                                                        norm=True)['y'],
-                                       verbose=0)
+    test_norm_metrics = model.evaluate(
+        stock.raw_values_lstm_wrapper(dataset='test', norm=True,
+                                      timesteps=timesteps)['X'],
+        stock.raw_values_lstm_wrapper(dataset='test', norm=True,
+                                      timesteps=timesteps)['y'],
+        verbose=0)
+
     # Log the metrics from the normalized values
     for metric in zip(model.metrics_names, test_norm_metrics):
         _run.log_scalar('test_norm_' + metric[0], metric[1])
 
     # Now calculate and save the unnormalised metrics
     # Predict returns normalised values
-    y_pred_norm = model.predict(stock.raw_values(dataset='test',
-                                                 norm=True)['X'])
+    y_pred_norm = model.predict(stock.raw_values_lstm_wrapper(
+        dataset='test',
+        norm=True,
+        timesteps=timesteps)['X'])
     # Scale the output back to the actual stock price
     y_pred = stock.denorm_predictions(y_pred_norm)
 
     # Calculate the unnormalized metrics
-    y_true = stock.raw_values(dataset='test')['y']
+    y_true = stock.raw_values_lstm_wrapper(dataset='test',
+                                           timesteps=timesteps)['y']
 
     # df1 = pd.DataFrame({'date': stock.df.index.values[-y_pred.shape[0]:], 'y_pred': y_pred.flatten(), 'y_true': y_true.flatten()})
     # df1.set_index('date', inplace=True)
-    # df1.to_csv('plot_data_baseline_sent.csv')
-
+    # df1.to_csv('plot_data_lstm.csv')
     test_metrics = {
         'test_loss': metrics.mean_squared_error(
             y_true, y_pred),
