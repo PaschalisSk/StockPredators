@@ -2,7 +2,9 @@
 /*/
 !/data/
 !/playground/
+/playground/__pycache__/
 !/src/
+/src/__pycache__/
 !/report/
 /report/*
 !/report/report.pdf
