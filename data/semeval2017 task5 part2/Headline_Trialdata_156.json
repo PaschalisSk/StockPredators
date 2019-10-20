@@ -1,0 +1,782 @@
+[
+  {
+    "id": 23,
+    "company": "Tesco",
+    "title": "Tesco says UK store closures put 2000 jobs at risk"
+  },
+  {
+    "id": 90,
+    "company": "CRH",
+    "title": "CRH's concrete bid for Holcim Lafarge assets"
+  },
+  {
+    "id": 91,
+    "company": "Holcim Lafarge",
+    "title": "CRH's concrete bid for Holcim Lafarge assets"
+  },
+  {
+    "id": 98,
+    "company": "Reed Elsevier",
+    "title": "Reed Elsevier share price slides on underwhelming full-year results"
+  },
+  {
+    "id": 239,
+    "company": "Kingfisher",
+    "title": "Kingfisher bid for Mr Bricolage runs into trouble"
+  },
+  {
+    "id": 240,
+    "company": "Mr Bricolage",
+    "title": "Kingfisher bid for Mr Bricolage runs into trouble"
+  },
+  {
+    "id": 261,
+    "company": "Glencore",
+    "title": "Glencore's annual results beat forecasts"
+  },
+  {
+    "id": 304,
+    "company": "Diageo",
+    "title": "Diageo stays neutral on India boardroom turmoil"
+  },
+  {
+    "id": 675,
+    "company": "Shell",
+    "title": "Shell to Cut 6500 Jobs as Profit Drops"
+  },
+  {
+    "id": 1210,
+    "company": "Shire",
+    "title": "Markets Shire up 2.5% and Baxalta up 6% on $32bn deal"
+  },
+{
+    "id": 1211,
+    "company": "Baxalta",
+    "title": "Markets Shire up 2.5% and Baxalta up 6% on $32bn deal"
+  },
+  {
+    "id": 1374,
+    "company": "BP",
+    "title": "BP ends 27-year sponsorship of Tate as falling oil price takes toll"
+  },
+  {
+    "id": 1658,
+    "company": "HSBC",
+    "title": "HSBC, Standard Chartered Lead Asia Bank Rout as U.K. Votes 'Out'"
+  },
+  {
+    "id": 1659,
+    "company": "Standard Chartered",
+    "title": "HSBC, Standard Chartered Lead Asia Bank Rout as U.K. Votes 'Out'"
+  },
+    {
+      "id": 1002,
+      "company": "Diageo",
+      "title": "Diageo receives reports from United Spirits on financial irregularities involving ..."
+    },
+    {
+      "id": 1003,
+      "company": "BP",
+      "title": "Industry NewsWood Group wins multi-million dollar contract with BP"
+    },
+    {
+      "id": 1004,
+      "company": "Centrica PLC",
+      "title": "Centrica extends gas deals with Gazprom, Statoil"
+    },
+    {
+      "id": 1005,
+      "company": "MediaCityUK",
+      "title": "Legal & General arm buys 50 pct stake in MediaCityUK in Manchester"
+    },
+    {
+      "id": 1006,
+      "company": "Home Retail Group",
+      "title": "Sainsbury's pressed to raise bid for Home Retail Group"
+    },
+    {
+      "id": 1007,
+      "company": "ExxonMobil",
+      "title": "Buffett's Berkshire builds Deere stake, dumps Exxon"
+    },
+    {
+      "id": 1008,
+      "company": "Aldi",
+      "title": "Aldi and Lidl expansion plans speed ahead as Tesco, Sainsbury's, Morrisons ..."
+    },
+    {
+      "id": 1009,
+      "company": "Glencore",
+      "title": "Analysis - Copper market may get a 2003-style supply shock from Glencore closures"
+    },
+    {
+      "id": 1010,
+      "company": "Tesco PLC",
+      "title": "Tesco share price: Korean currency slide may hit Homeplus sale plans"
+    },
+    {
+      "id": 1011,
+      "company": "AstraZeneca",
+      "title": "AstraZeneca cancer drug may not be so fast getting to market"
+    },
+    {
+      "id": 1012,
+      "company": "Tullow Oil",
+      "title": "Tullow Oil Suspends Dividend Amid Oil Price Fall"
+    },
+    {
+      "id": 1013,
+      "company": "Barclays",
+      "title": "UPDATE 3-Barclays sells Italian branches to Mediobanca at a loss"
+    },
+    {
+      "id": 1014,
+      "company": "Lemann",
+      "title": "Diageo Shares Surge on Report of Possible Takeover by Lemann"
+    },
+    {
+      "id": 1015,
+      "company": "Aviva plc",
+      "title": "Aviva, Friends Life top forecasts ahead of 5.6 billion pound merger"
+    },
+    {
+      "id": 1016,
+      "company": "Friends Life",
+      "title": "Friends Life lifts profits 38% and hikes divi ahead of proposed Aviva takeover"
+    },
+    {
+      "id": 1017,
+      "company": "Centrica PLC",
+      "title": "Centrica suffers protest from shareholders over pay"
+    },
+    {
+      "id": 1018,
+      "company": "Google",
+      "title": "Google Fiber to buy Webpass for big city Internet service"
+    },
+    {
+      "id": 1019,
+      "company": "Prudential",
+      "title": "Is It Worth Investing In Tesco PLC And Prudential plc Now?"
+    },
+    {
+      "id": 1020,
+      "company": "Home Retail Group",
+      "title": "2 Turnaround Buys For 2016? BHP Billiton plc And Home Retail Group Plc"
+    },
+    {
+      "id": 1021,
+      "company": "Halfords",
+      "title": "Halfords appoints Jonny Mason as new CFO"
+    },
+    {
+      "id": 1022,
+      "company": "Precision Castparts Corp.",
+      "title": "UPDATE 5-Buffett pays high price for Precision Castparts"
+    },
+    {
+      "id": 1023,
+      "company": "Experian",
+      "title": "Experian says receives class actions related to T-Mobile breach"
+    },
+    {
+      "id": 1024,
+      "company": "Aviva plc",
+      "title": "Market Report: Aviva tops the market as traders approve of its choice of Friends"
+    },
+    {
+      "id": 1025,
+      "company": "Aer Lingus",
+      "title": "IAG closes in on Aer Lingus with increased offer"
+    },
+    {
+      "id": 1026,
+      "company": "Fokker Technologies",
+      "title": "GKN to buy Fokker Technologies for 706 mln euros"
+    },
+    {
+      "id": 1027,
+      "company": "Baxalta",
+      "title": "UPDATE 1-Shire steps up drive to get Baxalta talking after $30 bln bid"
+    },
+    {
+      "id": 1028,
+      "company": "Pearson",
+      "title": "Pearson in Talks to Sell Its Stake in the Economist Group"
+    },
+    {
+      "id": 1029,
+      "company": "Tesco",
+      "title": "CompaniesTesco sheds Harris & Hoole coffee shops"
+    },
+    {
+      "id": 1030,
+      "company": "BP",
+      "title": "REFILE-BP agrees UK gas pipeline stake sale to infrastructur"
+    },
+    {
+      "id": 1031,
+      "company": "BHP Billiton",
+      "title": "BHP Billiton slashes dividend, posts $5.67 billion net loss"
+    },
+    {
+      "id": 1032,
+      "company": "Standard Chartered PLC",
+      "title": "StanChart capital raising would be \"major surprise\" -investor Aberdeen"
+    },
+    {
+      "id": 1033,
+      "company": "Wm Morrison",
+      "title": "Why I Would Put J Sainsbury plc In My Trolley Before Wm Morrison Supermarkets ..."
+    },
+    {
+      "id": 1034,
+      "company": "Glaxo",
+      "title": "Glaxo Sees Hope for Respiratory Drugs as Earnings Beat Estimates"
+    },
+    {
+      "id": 1035,
+      "company": "SABMiller",
+      "title": "Peroni and Grolsch put up for sale as AB InBev plans acquisition of SABMiller"
+    },
+    {
+      "id": 1036,
+      "company": "Aviva plc",
+      "title": "BRIEF-Aviva aims to increase dividend pay-out ratio to 50 pct in 2017"
+    },
+    {
+      "id": 1037,
+      "company": "Direct Line Insurance Group PLC",
+      "title": "Direct Line rings up higher profit"
+    },
+    {
+      "id": 1038,
+      "company": "Barclays",
+      "title": "Jim Armitage: Barclays boss Jes Staley steps up to the plate with post-Leave positivity"
+    },
+    {
+      "id": 1039,
+      "company": "AstraZeneca",
+      "title": "AstraZeneca sells rights to anaesthetics to South Africa's Aspen"
+    },
+    {
+      "id": 1040,
+      "company": "GE",
+      "title": "GE to Sell Majority Stake in Bank BPH's Core Bank to Alior Bank"
+    },
+    {
+      "id": 1041,
+      "company": "Royal Bank of Scotland Group plc",
+      "title": "StanChart and RBS struggle in Bank of England stress tests"
+    },
+    {
+      "id": 1042,
+      "company": "Antofagasta",
+      "title": "Antofagasta Sees Lower Cash Costs In 2015 - Quick Facts"
+    },
+    {
+      "id": 1043,
+      "company": "NPS",
+      "title": "NPS prospects dependent on drug approval"
+    },
+    {
+      "id": 1044,
+      "company": "Priceline",
+      "title": "Priceline's stock jumps to new high for the year after Barclays upgrade"
+    },
+    {
+      "id": 1045,
+      "company": "Tesco PLC",
+      "title": "Tesco leads leap in FTSE 100; Marks & Spencer drops"
+    },
+    {
+      "id": 1046,
+      "company": "Tesco PLC",
+      "title": "Tesco UK personnel director quits supermarket"
+    },
+    {
+      "id": 1047,
+      "company": "Royal Bank of Scotland Group plc",
+      "title": "Royal Bank of Scotland fortunes ebbed and flowed under 3 chiefs"
+    },
+    {
+      "id": 1048,
+      "company": "ExxonMobil",
+      "title": "Exxon Beaumont CDU overhaul to be slowed by accident: sources"
+    },
+    {
+      "id": 1049,
+      "company": "TalkTalk",
+      "title": "TalkTalk hires BAE Systems to investigate cyber attack"
+    },
+    {
+      "id": 1050,
+      "company": "Valeant Pharmaceuticals International",
+      "title": "Valeant Said to Name New CEO With Pearson Still Hospitalized"
+    },
+    {
+      "id": 1051,
+      "company": "Entertainment One",
+      "title": "ITV to pursue takeover of Canada's Entertainment One: Bloomberg"
+    },
+    {
+      "id": 1052,
+      "company": "JP Morgan Chase",
+      "title": "Barclays appoints JPMorgan's Paul Compton as new COO"
+    },
+    {
+      "id": 1053,
+      "company": "Rio Tinto",
+      "title": "Rio Approves $5.3 Billion Oyu Tolgoi Copper Mine Expansion"
+    },
+    {
+      "id": 1054,
+      "company": "Weir Group",
+      "title": "Weir Group sees continued fall in orders from oil and gas business"
+    },
+    {
+      "id": 1055,
+      "company": "BG Group",
+      "title": "New BG Group CEO Helge Lund Starts Earlier Than Expected"
+    },
+    {
+      "id": 1056,
+      "company": "BHP",
+      "title": "BHP, Residents Brace as Cyclone Stan Nears Australian Coast"
+    },
+    {
+      "id": 1057,
+      "company": "Glaxo",
+      "title": "Glaxo's ViiV Healthcare Signs China Manufacturing Deal With Desano"
+    },
+    {
+      "id": 1058,
+      "company": "Barclays",
+      "title": "Barclays brands financier Amanda Staveley's $1bn claim as \"misconceived\""
+    },
+    {
+      "id": 1059,
+      "company": "GlaxoSmithKline",
+      "title": "GlaxoSmithKline rebound gathering pace, says outgoing CEO"
+    },
+    {
+      "id": 1060,
+      "company": "SABMiller",
+      "title": "AB InBev to sell more SAB assets as seeks EU deal approval"
+    },
+    {
+      "id": 1061,
+      "company": "Lloyds Banking Group PLC",
+      "title": "UK government cuts stake in Lloyds to below 11 percent"
+    },
+    {
+      "id": 1062,
+      "company": "Morrissons",
+      "title": "Morrisons store closures: 900 jobs to go as 11 branches are closed due to ..."
+    },
+    {
+      "id": 1063,
+      "company": "BP",
+      "title": "BP chairman defends CEO Bob Dudley's pay increase"
+    },
+    {
+      "id": 1064,
+      "company": "Standard Chartered PLC",
+      "title": "Profits Fall 25% At Standard Chartered PLC: Should You Buy Or Sell?"
+    },
+    {
+      "id": 1065,
+      "company": "SABMiller",
+      "title": "SAB's Chairman Digs In With Board Divided on InBev Offer"
+    },
+    {
+      "id": 1066,
+      "company": "Aviva plc",
+      "title": "Aviva Fined $27 Million by U.K. Regulator Over Fee Failings"
+    },
+    {
+      "id": 1067,
+      "company": "Whitbread",
+      "title": "Whitbread Profit Up As Sales Continue To Rise, Looking For New CEO"
+    },
+    {
+      "id": 1068,
+      "company": "Persimmon",
+      "title": "Persimmon shares nudge higher as housebuilder sees strong 2014"
+    },
+    {
+      "id": 1069,
+      "company": "BG Group",
+      "title": "UPDATE 1-BG Group's record output limits oil price fallout"
+    },
+    {
+      "id": 1070,
+      "company": "Standard Life",
+      "title": "Standard Life share price: Group gets approval to hike stake in India JV"
+    },
+    {
+      "id": 1071,
+      "company": "Tesco",
+      "title": "Tesco Mobile is offering you cash back in exchange for looking at ads"
+    },
+    {
+      "id": 1072,
+      "company": "Wolseley",
+      "title": "Wolseley profit up 18%, warns on revenue growth"
+    },
+    {
+      "id": 1073,
+      "company": "Entertainment One",
+      "title": "ITV share price: Group mulls takeover of Canada's Entertainment One"
+    },
+    {
+      "id": 1074,
+      "company": "Blueprint",
+      "title": "Blueprint Receives FDA Nod To Proceed With Clinical Trials For 2 Drug ..."
+    },
+    {
+      "id": 1075,
+      "company": "SABMiller",
+      "title": "SABMiller buys Meantime to quench thirst for craft beer"
+    },
+    {
+      "id": 1076,
+      "company": "Royal Bank of Scotland Group plc",
+      "title": "Irish Said Chasing Standard Chartered, RBS as Brexit Vote Nears"
+    },
+    {
+      "id": 1077,
+      "company": "Barclays",
+      "title": "After Barclays and Bank of America, Citigroup has blockchain in sight"
+    },
+    {
+      "id": 1078,
+      "company": "HSBC",
+      "title": "US says HSBC must do more to improve compliance"
+    },
+    {
+      "id": 1079,
+      "company": "China Merchants Group",
+      "title": "Carnival Corporation and China Merchants Group Sign Memo of Understanding ..."
+    },
+    {
+      "id": 1080,
+      "company": "Barclays",
+      "title": "Staley to face challenges at Barclays"
+    },
+    {
+      "id": 1081,
+      "company": "GSK",
+      "title": "GSK aims to file up to 20 new drugs for approval by 2020"
+    },
+    {
+      "id": 1082,
+      "company": "British American Tobacco plc",
+      "title": "British American Tobacco accused of bribing senior politicians to sabotage ..."
+    },
+    {
+      "id": 1083,
+      "company": "BT Group",
+      "title": "BT finance director Tony Chanmugam to step down"
+    },
+    {
+      "id": 1084,
+      "company": "AstraZeneca",
+      "title": "AstraZeneca to cut costs but stays silent on M&A talk"
+    },
+    {
+      "id": 1085,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "Buffett's Berkshire builds Deere stake, dumps Exxon"
+    },
+    {
+      "id": 1086,
+      "company": "Barclays",
+      "title": "Barclays Not Convinced by Gains in South African Stocks: Chart"
+    },
+    {
+      "id": 1087,
+      "company": "BP",
+      "title": "5 Years After BP Spill: What's Changed in Offshore Drilling"
+    },
+    {
+      "id": 1088,
+      "company": "AstraZeneca",
+      "title": "AstraZeneca Explores Potential Deal With Acerta for Cancer Drug"
+    },
+    {
+      "id": 1089,
+      "company": "Alibaba",
+      "title": "Tesco sells half of stake in ecommerce site Lazada to Alibaba for Â£90m"
+    },
+    {
+      "id": 1090,
+      "company": "Lloyds Banking Group PLC",
+      "title": "UK sells more of Lloyds bank stake, 12.5 billion pounds raised so far"
+    },
+    {
+      "id": 1091,
+      "company": "Hargreaves Lansdown",
+      "title": "Hargreaves Lansdown share price falls as costs mount - although pensions ..."
+    },
+    {
+      "id": 1092,
+      "company": "Meggitt",
+      "title": "Meggitt agrees to buy US aerospace component firm for $340 million"
+    },
+    {
+      "id": 1093,
+      "company": "CRH",
+      "title": "TRLPC - CRH backs Lafarge Holcim asset buy with 6.5 bln euro bridge loan"
+    },
+    {
+      "id": 1094,
+      "company": "Bloomberg",
+      "title": "Bloomberg buys Barclays' benchmarking business"
+    },
+    {
+      "id": 1095,
+      "company": "Deutsche Bank",
+      "title": "Barclays, Deutsche Bank Fight to Lift Profit Just Got Harder"
+    },
+    {
+      "id": 1096,
+      "company": "Royal Bank of Scotland Group plc",
+      "title": "Royal Bank of Scotland chair hints Brexit turmoil will delay government sale"
+    },
+    {
+      "id": 1097,
+      "company": "Sainsbury's",
+      "title": "Sainsbury's, Asda, Tesco and Morrisons will all cut petrol prices as oil falls ..."
+    },
+    {
+      "id": 1098,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "UPDATE 1-Berkshire applies to boost Wells Fargo stake above 10 pct"
+    },
+    {
+      "id": 1099,
+      "company": "Baxalta",
+      "title": "Shire Sees Baxalta Deal Closing as Expected After New Rules"
+    },
+    {
+      "id": 1100,
+      "company": "AstraZeneca",
+      "title": "AstraZeneca heart drug boosted by major clinical trial success"
+    },
+    {
+      "id": 1101,
+      "company": "Baxalta",
+      "title": "Shire share price under pressure after $32bn Baxalta deal"
+    },
+    {
+      "id": 1102,
+      "company": "Aviva plc",
+      "title": "UK WINNERS & LOSERS: Aviva And Friends Life Lead FTSE 100 Gainers"
+    },
+    {
+      "id": 1103,
+      "company": "Glencore",
+      "title": "CompaniesGlencore's annual results beat forecasts"
+    },
+    {
+      "id": 1104,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "Warren Buffett's Berkshire Hathaway quarterly profit jumps almost one third"
+    },
+    {
+      "id": 1105,
+      "company": "Pfizer",
+      "title": "Pfizer to cut 120 jobs with closure of Cambridge R&D centre"
+    },
+    {
+      "id": 1106,
+      "company": "Sainsbury's",
+      "title": "Sainsbury's says to outperform rivals in tough market"
+    },
+    {
+      "id": 1107,
+      "company": "Centrica PLC",
+      "title": "Centrica share price: British Gas under fire despite 5% price cut"
+    },
+    {
+      "id": 1108,
+      "company": "Sensex",
+      "title": "RBI surprises Street; Sensex pares gains after hitting mount 30k"
+    },
+    {
+      "id": 1109,
+      "company": "Barclays",
+      "title": "London open: Taylor Wimpey and Ashtead drive markets higher, Barclays falls"
+    },
+    {
+      "id": 1110,
+      "company": "EasyJet",
+      "title": "easyJet leads Britain's FTSE lower as global bond rout resumes"
+    },
+    {
+      "id": 1111,
+      "company": "SABMiller",
+      "title": "AB InBev to Sell SABMiller Stake in China's Snow Beer"
+    },
+    {
+      "id": 1112,
+      "company": "London Stock Exchange Group",
+      "title": "Merkel's Government Said to Support Deutsche Boerse-LSE Merger"
+    },
+    {
+      "id": 1113,
+      "company": "Tesco PLC",
+      "title": "Tesco share price closes higher as two more directors leave grocer"
+    },
+    {
+      "id": 1114,
+      "company": "Lazada",
+      "title": "Tesco sells half of stake in ecommerce site Lazada to Alibaba for Â£90m"
+    },
+    {
+      "id": 1115,
+      "company": "Barclays",
+      "title": "UPDATE 5-Barclays Chairman McFarlane axes CEO to speed up strategic change"
+    },
+    {
+      "id": 1116,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "Berkshire Bought Apple Stake at $99.49 a Share, Filing Shows"
+    },
+    {
+      "id": 1117,
+      "company": "Sainsbury's",
+      "title": "Sainsbury CFO Rogers to Replace Home Retail CEO Walden"
+    },
+    {
+      "id": 1118,
+      "company": "Lloyds Banking Group PLC",
+      "title": "UPDATE 1-Lloyds to cut 945 jobs as part of 3-year restructuring plan"
+    },
+    {
+      "id": 1119,
+      "company": "Glencore",
+      "title": "Copper Prices up on Glencore Cuts to Zinc Supply"
+    },
+    {
+      "id": 1120,
+      "company": "WPP",
+      "title": "WPP's Sir Martin Sorrell is highest-paid FTSE 100 chief executive"
+    },
+    {
+      "id": 1121,
+      "company": "Meggitt",
+      "title": "Meggitt plc Crashes 20% On Profit Warning: Is It Now A Buy?"
+    },
+    {
+      "id": 1122,
+      "company": "Lloyds Banking Group PLC",
+      "title": "UK government cuts stake in Lloyds to below 11 pct"
+    },
+    {
+      "id": 1123,
+      "company": "EasyJet",
+      "title": "Passengers rise at EasyJet and Aer Lingus"
+    },
+    {
+      "id": 1124,
+      "company": "British Airways",
+      "title": "Sharm el-Sheikh travel disruption: British Airways, EasyJet, Thomson and ..."
+    },
+    {
+      "id": 1125,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "US STOCKS-Wall St rises on Berkshire deal, China stimulus hopes"
+    },
+    {
+      "id": 1126,
+      "company": "Prudential Financial",
+      "title": "Prudential Financial quarterly profit rises 64 pct"
+    },
+    {
+      "id": 1127,
+      "company": "Huawei",
+      "title": "US Seeks Huawei Records on Dealings With Sanctioned Nations"
+    },
+    {
+      "id": 1128,
+      "company": "Centrica PLC",
+      "title": "Centrica urges policy overhaul as it warns of 'looming gap' in UK energy supplies"
+    },
+    {
+      "id": 1129,
+      "company": "AstraZeneca",
+      "title": "UPDATE 1-AstraZeneca potassium drug delayed by manufacturing snag"
+    },
+    {
+      "id": 1130,
+      "company": "London Stock Exchange Group",
+      "title": "Activist Fund TCI Backs German Takeover of London Stock Exchange"
+    },
+    {
+      "id": 1131,
+      "company": "Royal Dutch Shell",
+      "title": "Oil majors like Royal Dutch Shell, Chevron, BP fail to find reserves to counter ..."
+    },
+    {
+      "id": 1132,
+      "company": "Barclays",
+      "title": "Four ex-Barclays bankers sentenced for roles in Libor rate-rigging scandal"
+    },
+    {
+      "id": 1133,
+      "company": "AB InBev",
+      "title": "AB InBev to sell more SAB assets as seeks EU deal approval"
+    },
+    {
+      "id": 1134,
+      "company": "Berkshire Hathaway Inc.",
+      "title": "Berkshire applies to boost Wells Fargo stake above 10 percent"
+    },
+    {
+      "id": 1135,
+      "company": "Marks & Spencer",
+      "title": "Tesco leads leap in FTSE 100; Marks & Spencer drops"
+    },
+    {
+      "id": 1136,
+      "company": "Balfour Beatty plc",
+      "title": "Balfour Beatty plc Set To Reinstate Dividend (And Rival National Grid plc And Centrica PLC Once More?)"
+    },
+    {
+      "id": 1137,
+      "company": "CIB",
+      "title": "UPDATE: CIB, Legal & General Sell Egyptian Life Joint Venture To AXA"
+    },
+    {
+      "id": 1138,
+      "company": "BG Group",
+      "title": "BG Group appoints new CEO one month early"
+    },
+    {
+      "id": 1139,
+      "company": "Glaxo",
+      "title": "FDA panel backs Glaxo asthma drug for adults, not adolescents"
+    },
+    {
+      "id": 1140,
+      "company": "Barclays",
+      "title": "Barclays set to name former JPMorgan banker Staley as new CEO"
+    },
+    {
+      "id": 1141,
+      "company": "Kingfisher",
+      "title": "Kingfisher share price slides on cost to implement new strategy"
+    },
+    {
+      "id": 1142,
+      "company": "Travis Perkins",
+      "title": "CompaniesTravis Perkins lifts dividend, earnings rise 15%"
+    },
+    {
+      "id": 1143,
+      "company": "Standard Chartered PLC",
+      "title": "Standard Chartered Shifts Emerging-Markets Strategy After Losses"
+    }
+]

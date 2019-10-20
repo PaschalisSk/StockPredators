@@ -1,9 +1,10 @@
-.idea/*
-
-src/__pycache__/*
-
-models/*
-final report/*
-interim report/*
-graphs/*
-haydn/*
+/*
+/*/
+!/data/
+!/playground/
+!/src/
+!/report/
+/report/*
+!/report/report.pdf
+!.gitignore
+!README.md

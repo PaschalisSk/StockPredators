@@ -1,0 +1,737 @@
+index,date,headline,sentiment
+0,2014-01-02,"Removing Edits in a Document, and Minimizing a Bar of Icons",0.11200136690000001
+1,2014-01-06,A Makeover for Maps,0.1406834275
+2,2014-01-07,Drawing Conclusions From Sony's Early Lead in the Console Race ,0.09831465040000001
+3,2014-01-07,Ford Chief Out of Running to Lead Microsoft  ,-0.0097483173
+4,2014-01-09,"China Cracks Open the Door for Video Game Consoles, but Doubts Abound",0.16808938980000002
+5,2014-01-09,"A Day After Surging, the Market Takes a Small Detour",0.2476867586
+6,2014-01-10,"Changes in Windows 8.1, With Skype Replacing Messaging App",0.0583824404
+7,2014-01-10,Tech Companies and White House Discuss Surveillance Reform,0.0486650467
+8,2014-01-16,Printing the Windows 8 Calendar,-0.0324181281
+9,2014-01-15,A Sensor Guided by Voice or Gestures,0.0455186218
+10,2014-01-16,A Sensor Guided by Voice or Gestures,0.0455186218
+11,2014-01-17,Sharing Web Links Without Cutting and Pasting,-0.0192617308
+12,2014-01-20,Economic Reports for the Week of Jan. 20,0.0805695429
+13,2014-01-23,How to Unblock Adobe Reader in Safari,0.0500415675
+14,2014-01-22,"On Davos Panel, Calls to Curb Government Data Collection",-0.11578553920000001
+15,2014-01-22,Dabbling in Microsoft Is Enough for Gates,0.1017236412
+16,2014-01-24,Nokia Struggles to Project a Bright Future Without Phones,0.1210514307
+17,2014-01-24,Microsoft Earnings Illustrate Move to Devices and Services From Software,0.0835936442
+18,2014-01-23,Microsoft Suggests Wider Options for Foreign Data,0.08127698300000001
+19,2014-01-24,Billionaires and Boasts,0.1094471514
+20,2014-01-24,Daily Report: Microsoft's Earnings Indicate a Shift to Devices and Services,0.0362420119
+21,2014-01-24,U.N. Leader Says Banks Should Finance More Sustainable Businesses,-0.058555137400000005
+22,2014-01-24,Gates and Summers Push Global Health Drive as Moral Imperative,0.093937397
+23,2014-01-24,Google Pushes Back Against Data Localization,0.1054539084
+24,2014-01-28,U.S. Relaxes Some Data Disclosure Rules,0.061657566600000005
+25,2014-01-27,Did Big Internet Companies Handicap Start-Ups in FISA Rule Changes?,0.07767682520000001
+26,2014-01-28,Daily Report: U.S. Eases Some Rules on Data Disclosure,0.0050567887
+27,2014-01-31,Another Option for an Upgrade From Windows XP,0.033624459100000004
+28,2014-01-30,A Focus on Insiders in Search for Microsoft C.E.O.,0.1627361178
+29,2014-02-01,Microsoft Said to Be Close to Naming a New Chief,0.08431432400000001
+30,2014-01-31,Contender for Microsoft Helm Seen as Unlikely to Shake It Up,0.058946680300000005
+31,2014-02-03,Tech Companies Offer Update on Government Data Requests,0.0521821789
+32,2014-02-04,Foursquare Checks In With Microsoft and Gets $15 Million to Revitalize Itself,-0.0222664271
+33,2014-02-04,Daily Report: Microsoft Names Satya Nadella Its New Chief,0.0782326832
+34,2014-02-04,Times Minute | Microsoft's New CEO,0.1888827831
+35,2014-02-04,"At Microsoft, a Step Forward as Founders Step Back",-0.0577137209
+36,2014-02-04,Microsoft Names New Chief; Gates Becomes Adviser,0.1250000149
+37,2014-02-04,"With New Chief, Microsoft's New Mantra Is 'Innovation,' Over and Over",0.1277447045
+38,2014-02-05,"New Boss at Microsoft, With Gates at His Side",-0.006501738000000001
+39,2014-02-05,Cyberabad's Swagger Returns as Native Son Takes Top Spot at Microsoft,0.0602201708
+40,2014-02-06,A Different Gates Is Returning to Microsoft,0.0936632678
+41,2014-02-06,"Daily Report: After Years in Philanthropy, a Different Gates Returns to Microsoft",-0.0540190376
+42,2014-02-10,Microsoft Loses a Number to Try to Gain a Future,0.09120625260000001
+43,2014-02-10,Seattle Gets Its Own Tech Bus Protest,0.0916697979
+44,2014-02-13,Two Game Consoles Battle for a Dubious Prize,0.1183884218
+45,2014-02-15,Microsoft’s Stakes in the Battle for Handsets,0.0736310035
+46,2014-02-20,Keeping a Computer Offline,0.1269826889
+47,2014-02-20,"This Phone Is Great, Till It’s Time to Add Apps",0.1036146581
+48,2014-02-21,"Satya Nadella, Chief of Microsoft, on His New Role",0.0786303431
+49,2014-02-21,"Snapdeal, the EBay of India, Sees Plenty of Room to Grow",0.0908290818
+50,2014-02-21,Barnes & Noble Receives Conditional Offer,0.1537274122
+51,2014-02-23,Q.&A. With Joe Belfiore on the Future of Windows Phone,0.1387976557
+52,2014-02-24,Nokia Taps Android for New Low-Cost Phone,0.1577416956
+53,2014-02-24,Microsoft Should Keep Nokia's Android Phones ,0.0910984576
+54,2014-02-24,Ford to Drop Microsoft From Car Systems,0.0015140796
+55,2014-02-27,British Spies Said to Intercept Yahoo Webcam Images,-0.12006817010000001
+56,2014-03-03,Ex-Clinton Aide Is Named Microsoft’s Chief Strategy Officer,0.1000985429
+57,2014-03-06,Bypassing a Credit Card Requirement for Apps,0.1358984858
+58,2014-03-04,"From Politics to Advising Microsoft’s Chief, Not Without Noise",0.08403713260000001
+59,2014-03-04,Daily Report: Mixed Responses at Microsoft to Rise of New Strategy Chief,0.1288637668
+60,2014-03-04,Steven Ballmer Reflects on Missteps and Ponders the Future of Microsoft,0.048381049200000005
+61,2014-03-05,"Behind Closed Doors, Microsoft's Board Reportedly Battled Chief Over Nokia Deal",0.023858031300000002
+62,2014-03-10,"Microsoft Pins Xbox One Hopes on Titanfall, a Sci-Fi Shooting Game",-0.0082713785
+63,2014-03-09,China Warns of Risks in Plan to Retire Windows XP,-0.0216550026
+64,2014-03-10,Daily Report: Microsoft Pins Hopes for Xbox One on Titanfall,-0.0860632882
+65,2014-03-10,EBay Rejects Icahn's Nominees for Its Board,0.0031393308
+66,2014-03-13,Transferring Old Palm Desktop Data,0.0833720788
+67,2014-03-13,A Theory Behind Surge in Xbox One Sales ,0.1713910699
+68,2014-03-16,"To Change Tunes, a Nod Will Be as Good as a Wink",0.1594279557
+69,2014-03-18,Microsoft may unveil Office for iPad,-0.06820233910000001
+70,2014-03-18,Oracle misses,0.0738078877
+71,2014-03-20,A Day of Honors for Women in the Video Game Industry,-0.0799415559
+72,2014-03-21,Complaint Against Kibkalo,-0.0260967705
+73,2014-03-21,Microsoft Software Leak Inquiry Raises Privacy Issues,-0.027725497300000002
+74,2014-03-21,Daily Report: Microsoft Leak Inquiry Raises Privacy Issues,-0.15403975550000001
+75,2014-03-21,Daily Report: Fallout From Snowden Hurts Tech Company Bottom Lines,0.035657946
+76,2014-03-21,Revelations of N.S.A. Spying Cost U.S. Tech Companies,0.0713783279
+77,2014-03-21,Another Price Cut for the Xbox One,-0.0699897856
+78,2014-03-22,"A Conversation With Danah Boyd, Author of 'It's Complicated,' About Teenagers Online",0.0847415105
+79,2014-03-24,Deadline in G.M. Inquiry; Game Maker’s I.P.O. Price,0.0391911529
+80,2014-03-24,Nokia Handset Sale to Microsoft Delayed,0.0810386017
+81,2014-03-27,Choosing a Tablet Computer,0.1925734133
+82,2014-03-28,"Microsoft to Offer Office for iPad, Maybe a Bit Late ",0.054180372500000004
+83,2014-03-27,Microsoft Unveils Office App for iPad,0.0010593183
+84,2014-03-28,The Tech Bubble's Silver Lining: Cheap Services for Everyone,0.11789304020000001
+85,2014-03-30,Battle of the Dash: Tech Companies Try to Get Their Apps in a Row,0.1375180781
+86,2014-03-28,Microsoft to Stop Inspecting Private Emails in Investigations,0.07236260180000001
+87,2014-03-29,Cloud Computing's Watershed Week,-0.010565211100000001
+88,2014-03-31,Senate Report on Caterpillar’s Tax Strategy,-0.0339808501
+89,2014-04-02,"Meet Microsoft's Cortana, a More Personal Siri",0.1323409528
+90,2014-04-02,Parsing Microsoft's Decision to Cut Windows Fees,-0.0119818272
+91,2014-04-04,Audio Editing in iMovie,0.1333634108
+92,2014-04-04,Microsoft Office for the iPad: It's Delightfully Familiar,0.0716646314
+93,2014-04-10,Microsoft Touts Data Protection Approval in Europe; Eager for New Customers,0.0447835773
+94,2014-04-13,The World Goes to the Polls,0.0101197613
+95,2014-04-14,Huge New York Development Project Becomes a Data Science Lab,-0.0005466242000000001
+96,2014-04-17,Adding a Religious Holidays Calendar,0.087905705
+97,2014-04-17,A Homecoming of Sorts for Mark Fields of Ford,0.0617816038
+98,2014-04-18,Fixing a Broken Smartphone,0.1522913128
+99,2014-04-18,Chinese Court Sentences 4 Activists to Jail,-0.2065421939
+100,2014-04-21,Times Minute | Tech Earnings Preview,0.16581343110000002
+101,2014-04-21,Times Minute | Tech Earnings Preview,0.16581343110000002
+102,2014-04-23,"Siri and Google Now, Meet Cortana",0.18724529450000002
+103,2014-04-24,Windows Phone 8.1 Finally Catches Up to Its Rivals,0.0298124477
+104,2014-04-24,Companies Back Initiative to Support OpenSSL and Other Open-Source Projects,0.0788493454
+105,2014-04-25,Digital Mapping May Be Nokia’s Hidden Jewel,-0.0788220912
+106,2014-04-25,Microsoft’s Profit Dips Less Than Expected as It Reshapes Itself,0.1979810447
+107,2014-04-28,Security Flaw Hits Microsoft Browser,0.0024928327
+108,2014-04-30,Xbox One to Go on Sale in China in September,0.07056711610000001
+109,2014-05-01,"Attackers Use Microsoft Security Hole Against Energy, Defense, Finance Targets ",0.0428891741
+110,2014-05-08,How to Move the Windows Address Book to a New Computer,0.059497192500000004
+111,2014-05-15,Saving Your Favorite Videos on YouTube,-0.0046979305
+112,2014-05-13,"To Compete With PlayStation on Price, Microsoft Offers Xbox Without Kinect Motion Sensor ",0.06801595540000001
+113,2014-05-21,"Microsoft Enlarges Surface’s Screen So It Can Be Used for Work, Too",0.0225280803
+114,2014-05-21,California Urges Websites to Disclose Online Tracking,0.0056110602
+115,2014-05-21,"Daily Report: Microsoft Expands Its Tablet's Screen, With Work in Mind",0.0801656693
+116,2014-05-28,The Sterlings Are Going in Opposite Directions,0.13101562860000002
+117,2014-05-30,Keeping Windows 8.1 Up to Date,-0.0155272437
+118,2014-06-01,Master of the Game (Diploma Says So),0.0292403344
+119,2014-05-30,"Sterling to Reap 15,900 Percent Return on Sale of Clippers",-0.0640759543
+120,2014-06-06,Who Made That Autocorrect?,0.1862990111
+121,2014-06-07,Internet Giants Erect Barriers to Spy Agencies,-0.0453289896
+122,2014-06-09,"Video Gaming’s Big Expo, and G.M.’s Shareholder Meeting",0.0583644211
+123,2014-06-12,Using iPhoto’s Contact Sheet Feature to Save Paper,0.0582300611
+124,2014-06-09,"At E3 Gaming Convention, Microsoft Shifts Emphasis of Xbox One Console to Games",-0.0035404644000000002
+125,2014-06-11,The Old Is New Again at E3 for Sony and Microsoft,0.0265350658
+126,2014-06-11,Microsoft Protests Order to Disclose Email Stored Abroad,0.0449185669
+127,2014-06-11,Order for Microsoft to Disclose Data Stored Outside of U.S.,0.1196981445
+128,2014-06-11,Daily Report: Microsoft Challenges Federal Warrant for Data Stored Overseas,-0.0476914831
+129,2014-06-11,"With a Bit of Planning, Keep the Cloud With You Always — Even Offline",0.1453091949
+130,2014-06-11,"Seattle, the New Center of a Tech Boom ",-0.0126693994
+131,2014-06-14,"E3 Still Dazzles, Even as Video Game Sales Go Digital",0.0711850002
+132,2014-06-16,Microsoft Unveils Machine Learning for the Masses,0.0764902905
+133,2014-06-19,Microsoft’s Surface Pro 3 Isn’t for Everybody,0.1651868522
+134,2014-06-19,Smartphones Embracing 'Kill Switches' as Theft Defense,0.0343391337
+135,2014-06-24,Microsoft Makes Bet Quantum Computing Is Next Breakthrough,0.1505729556
+136,2014-06-24,Daily Report: Microsoft Sees Quantum Computing as Technology's Next Frontier,0.1545431465
+137,2014-06-26,"Google, Microsoft and Others Delve Deeper Into Cloud Storage for Businesses",0.056877359700000005
+138,2014-07-08,"Intel, Qualcomm and Others Compete for 'Internet of Things' Standard",0.0570334084
+139,2014-07-09,Microsoft Taking Steps to Comply With the Right to be Forgotten ,0.0803330094
+140,2014-07-10,Cloud Computing Giants Add to Open Source Credentials With Kubernetes,0.1433910578
+141,2014-07-10,Satya Nadella Says Changes Are Coming to Microsoft,0.1447503865
+142,2014-07-17,Restoring Internet Explorer 11 to Windows 8.1 App Tiles,-0.0626339167
+143,2014-07-16,Large Round of Layoffs Expected at Microsoft,0.050495591000000006
+144,2014-07-18,"Microsoft to Lay Off Thousands, Most From Nokia Unit",0.0287841707
+145,2014-07-17,"Daily Report: Microsoft Says It Will Cut Up to 18,000 Jobs",0.0274206977
+146,2014-07-17,Finnish Pride Takes Another Blow From Microsoft Job Cuts,0.0275600646
+147,2014-07-18,Tech World's Challenge: Staying New,0.11297628280000001
+148,2014-07-20,"The Chatter for Sunday, July 20",0.0750547424
+149,2014-07-21,Microsoft’s Top Lawyer Is the Tech World’s Envoy,0.1470042467
+150,2014-07-23,"Microsoft&#8217;s Profits Slide on Mobile, but Its Cloud Flourishes",-0.1000083759
+151,2014-07-25,Sale of Handset Unit Bolsters Nokia’s Profit,0.12654533980000002
+152,2014-07-25,"A Mac That Keeps Working, Even in Sleep Mode",-0.0108305104
+153,2014-07-25,Challenges for Amazon's Cloud Computing Hopes,0.08621674780000001
+154,2014-07-28,Adapting Old Laws to New Technologies,0.1449033022
+155,2014-07-29,"With Microsoft in Sights, China Starts to Squeeze U.S. Tech Companies",0.0396012366
+156,2014-07-29,Seattle Takes Oracle's Cloud,0.050890345100000005
+157,2014-07-30,China Investigating Microsoft for ‘Monopolistic Behavior’,0.09102040530000001
+158,2014-08-01,China Harasses U.S. Tech Companies,0.1462268978
+159,2014-07-31,Judge Rules That Microsoft Must Turn Over Data Stored in Ireland,0.0811327547
+160,2014-08-01,Microsoft Sues Samsung Over Android Royalty Payments,-0.067148
+161,2014-08-03,"Cloud Revenue Jumps, Led by Microsoft and IBM",0.18207295240000002
+162,2014-08-05,China Tells Microsoft Not to Interfere With Inquiry,0.2528744936
+163,2014-08-11,China’s Energetic Enforcement of Antitrust Rules Alarms Foreign Firms,0.0627025142
+164,2014-08-11,Q. and A.: David Hoffman on Antimonopoly Investigations into Foreign Companies in China,0.14423200490000002
+165,2014-08-13,"As Data Overflows Online, Researchers Grapple With Ethics",0.09582618620000001
+166,2014-08-13,"Daily Report: As Social Media Studies Proliferate, Experts Weigh Ethics Guidelines ",0.026001995400000002
+167,2014-08-15,Quicker Ways to Digitize Old Photographs,0.0777350292
+168,2014-08-18,XRay: A New Tool for Tracking the Use of Personal Data on the Web,0.09751686450000001
+169,2014-08-20,"Steve Ballmer Quits Microsoft Board, Citing His Outside Duties",-0.0101568261
+170,2014-08-20,Daily Report: Steve Ballmer Resigns From Board of Microsoft,-0.1306969076
+171,2014-08-28,Ways to Protect a PC With Windows 8.1,0.0820666924
+172,2014-09-04,Western Companies Appear to Push Back Against Chinese Crackdown,0.0072858087
+173,2014-09-05,Opposition Grows in Europe to Google Antitrust Proposal,-0.0078027002
+174,2014-09-04,Microsoft Introduces Three New Smartphones,-0.008398287
+175,2014-09-05,"During a Season for New Devices, a Tough Market for Smartphone Makers",0.0856000558
+176,2014-09-09,Minecraft Is Expected to Be Acquired by Microsoft,0.0060904208
+177,2014-09-10,Intel Shares More of Its Extreme Makeover,0.0347624682
+178,2014-09-11,Microsoft Sees More Than Fun in a Game Like Minecraft,0.15578581390000001
+179,2014-09-11,"Daily Report: In Popular Games Like Minecraft, Tech Titans See Potential Beyond Fun ",-0.0553135462
+180,2014-09-14,Smartphones: The Corporate Personality Test,0.0645606741
+181,2014-09-15,Microsoft Says It Will Pay $2.5 Billion for Company That Created Minecraft,0.1138833389
+182,2014-09-22,"China Clamps Down on Web, Pinching Companies Like Google",0.0216163937
+183,2014-09-22,Hurd: Oracle Takes On Microsoft in the Cloud,0.0275347289
+184,2014-09-23,"With Talko App, Ray Ozzie Creates a Permanent Voice",0.14933471380000002
+185,2014-09-29,Microsoft Begins a Push Into the Polling World,0.0030647318
+186,2014-09-29,The Latest Player in the Polling Game? It's Microsoft,0.15137988330000002
+187,2014-09-30,Questions About Clippers Remain After Sale to Steve Ballmer,-0.0175639335
+188,2014-09-30,Microsoft Windows 10 Displays a Familiar Look,0.1365041286
+189,2014-10-01,Apple&#8217;s Special Irish Tax Breaks,0.1182774082
+190,2014-10-03,Antitrust Nominee in Europe Promises Scrutiny of Big Tech Companies,-0.0665719733
+191,2014-10-07,Microsoft and Other Firms Pledge to Protect Student Data,0.0634001866
+192,2014-10-08,Decline in PC Sales Starts to Slow; Largest Makers See Growth,-0.0240518209
+193,2014-10-09,Microsoft’s Nadella Sets Off a Furor on Women’s Pay,-0.0309570357
+194,2014-10-10,Why Microsoft’s Nadella Is Wrong About Women and Raises,-0.0006354588
+195,2014-10-10,Today in Small Business: the Rookie Cookie,0.08310505
+196,2014-10-11,Satya Nadella’s Advice on Raises Stirs Wider Discussion Among Women,0.0779267624
+197,2014-10-12,Salesforce Makes Its Big Data Move,0.0584151186
+198,2014-10-14,Daily Report: Russian Hackers Exploit Flaw in Microsoft Windows to Spy on Governments,0.0455199517
+199,2014-10-16,Hiding History in Firefox,-0.085589312
+200,2014-10-15,Poodle Bug Marks Third Major Security Flaw Discovered This Year,-0.0145854885
+201,2014-10-16,Microsoft Wins a Spot on the N.F.L. Sideline,0.209883973
+202,2014-10-15,This Emperor Needs New Clothes,-0.0643447042
+203,2014-10-20,Tech Giants’ Earnings and Eurozone Bank Stress Tests,0.0700883195
+204,2014-10-21,"For Microsoft, Cloud Business Looks More Promising Than Mobile ",0.1398365945
+205,2014-10-21,Longtime Microsoft Executive Opens Cloud Database Start-Up,-0.06726719440000001
+206,2014-10-22,Coming of Age in Cloud Computing,0.0036893263000000003
+207,2014-10-24,Microsoft Offers Tantalizing Signs of Progress,0.15334405
+208,2014-10-29,Former Washington State Attorney General Appeals to His Former Office,-0.11904036250000001
+209,2014-10-29,Google Executive Sets Record for Free Fall: Reporter's Notebook,-0.1061195657
+210,2014-10-30,Microsoft Jumps Into the Growing Market for Wearable Fitness Technology,0.1801954061
+211,2014-10-30,Daily Report: Microsoft Leaps Into Wearable Fitness,-0.0587808378
+212,2014-10-31,Turning the PC Into a DVR,0.2068454623
+213,2014-11-02,Microsoft Band Is a Welcome Surprise in the Wearable Market,0.1638512909
+214,2014-11-06,Daily Report: Microsoft Offering Free Mobile Version of Office,-0.1763052493
+215,2014-11-06,"Microsoft, Changing Tack, Makes Office Suite Free on Mobile",0.049457904000000004
+216,2014-11-09,Ireland Vies to Remain Silicon Valley's Low-Tax Home Away From Home,0.06568121910000001
+217,2014-11-10,Microsoft Hopes This Video Game Collection Wings Its Way to Success,0.0939074084
+218,2014-11-10,Microsoft's Nadella Talks About the Future of Office ,0.0243572388
+219,2014-11-13,Assessing Space on a Computer’s Hard Drive,0.10759132360000001
+220,2014-11-18,"With New Tablet, Nokia Returns to Devices",0.135716483
+221,2014-11-23,What Cloud Computing Means to Your Job,0.049748707600000004
+222,2014-11-27,AirDrop Alternatives for Windows and Android,0.0827705041
+223,2014-12-01,"Microsoft Buys Acompli, an Email Start-Up",0.0884816647
+224,2014-12-04,How to Restore Old Versions of Word Documents,0.0773647279
+225,2014-12-05,Barnes &amp; Noble and Microsoft End Nook Partnership,0.051031265400000005
+226,2014-12-04,How the Promise of Microsoft's Investment in Nook Soured,0.039030890900000004
+227,2014-12-08,European Privacy Debate on Display in Paris,-0.0928223133
+228,2014-12-11,Keeping Up With Windows Update,0.1502861828
+229,2014-12-12,Ford Trades Microsoft for BlackBerry in Revamping In-Car System ,0.02463332
+230,2014-12-15,Tech and Media Companies Back Microsoft in Privacy Case,0.1070033386
+231,2014-12-17,Google’s Detractors Take Their Fight to the States,-0.0451656021
+232,2014-12-24,Ireland Lends Support to Microsoft in Email Privacy Case,0.0586052425
+233,2014-12-25,"Sony Streams ‘The Interview’ on YouTube, Google Play and Xbox",0.0487863235
+234,2014-12-26,Sony PlayStation and Microsoft Xbox Live Networks Attacked by Hackers,0.0342519097
+235,2015-01-01,Sony’s ‘The Interview’ Is Set for On-Demand and Wider Online Viewing,0.1266037077
+236,2015-01-01,"Standouts in Tech: Drones, Virtual Reality, Instant Translation and A.I.",0.0058910996000000005
+237,2015-01-02,Sharing Flickr Photos Privately,0.1242765188
+238,2015-01-05,PlayStation 4 Faces Resurgent Rivals in Xbox One and Wii U,-0.0843109787
+239,2015-01-19,Microsoft Looks to Windows 10 for a Jolt in the Mobile Realm,-0.0511984043
+240,2015-01-19,Daily Report: Microsoft Looks to Windows 10 for a Boost in Mobile,-0.025599435
+241,2015-01-20,How Xbox Could Help Microsoft and Windows 10,0.23282146450000002
+242,2015-01-22,"At Windows 10 Event, Microsoft Jumps Into Augmented Reality With HoloLens Headset",0.0780459568
+243,2015-01-22,Microsoft HoloLens: A Sensational Vision of the PC’s Future,0.0203522611
+244,2015-01-23,Microsoft's Holographic Vision Triggers a Flashback,0.0770421028
+245,2015-01-26,Unease for What Microsoft’s HoloLens Will Mean for Our Screen-Obsessed Lives,0.0365718752
+246,2015-01-27,Price Cuts for Crucial Microsoft Products Eroded Holiday-Season Profit ,-0.0413533449
+247,2015-01-28,What Happens if Apple Drops Google From Its Browser?  ,0.1739512533
+248,2015-01-28,Amazon's Got Mail,-0.030225655100000002
+249,2015-01-29,Video Feature: Signs That Virtual Reality Is on the Verge of Taking Off,0.0803553239
+250,2015-01-29,La realidad virtual al borde de despegar,0.0892779902
+251,2015-01-29,"Microsoft Brings Outlook to iPhone, Other Mobile Devices",0.08634532240000001
+252,2015-01-30,"How, and Why, Apple Overtook Microsoft",0.22129416470000002
+253,2015-01-30,"Cómo, y por qué, Apple superó a Microsoft",0.1392521411
+254,2015-01-30,Daily Report: How Apple Surpassed Microsoft,0.06745850290000001
+255,2015-01-30,Apple’s Near-Death Experience Saved It,0.1222732291
+256,2015-02-02,Raspberry Pi Computer Gains More Horsepower,0.2563959062
+257,2015-02-05,Traveling With an iPhone,0.1936109513
+258,2015-02-09,Microsoft and Samsung End Legal Dispute,0.2099808306
+259,2015-02-12,Importing Images to iPhoto,-0.09763652090000001
+260,2015-02-11,Microsoft Continues Mobile Push With Sunrise Acquisition,0.1711518914
+261,2015-02-13,"Ford and Forza Team Up on New GT, a Supercar for Street and Screen",0.1723002046
+262,2015-02-13,Deleting Files From Microsoft’s OneDrive,0.1535630375
+263,2015-02-19,Securing a Hotmail Account,0.13595469300000002
+264,2015-02-19,Microsoft Has Suddenly Gotten Serious With Mobile,0.1050435826
+265,2015-02-19,"Con nuevas aplicaciones como Outlook, Microsoft se enseria con la tecnología móvil",0.0721406862
+266,2015-02-19,Daily Report: Microsoft Zeroes In on Mobile,-0.0849691927
+267,2015-02-26,Filing Away Gmail Messages,0.1424257308
+268,2015-03-02,"Sony Reveals Its Waterproof 10-Inch Tablet, and a Midrange Phone the U.S. Can&#8217;t Have",0.1517325938
+269,2015-03-05,"In Chase of Apple, Smartphone Makers Shift Strategies",-0.026642983800000002
+270,2015-03-05,Researchers Report Milestone in Developing Quantum Computer,-0.0021205258
+271,2015-03-05,Todos contra Apple en el mercado de los smartphones,0.1013089791
+272,2015-03-05,"Nasdaq Changed in Its Climb to 5,000",0.0887099206
+273,2015-03-12,Fighting Back Against Malware,0.08801146600000001
+274,2015-03-18,Microsoft Backs Further Away From Selling Software,0.1198140308
+275,2015-03-23,Microsoft Partners With Android Makers in Its Latest Mobile Push,0.0581506379
+276,2015-03-26,"From Microsoft, a Novel Way to Mandate Sick Leave",0.0974661112
+277,2015-04-09,Diagnosing a Syncing Problem With iTunes,0.1860116124
+278,2015-04-09,Amazon to Sell Predictions in Cloud Race Against Google and Microsoft,0.0825526491
+279,2015-04-12,"Despite Federal Regulation, C.E.O.-Worker Pay Gap Data Remains Hidden",-0.1642820984
+280,2015-04-13,"How Europe Is Going After Apple, Google and Other U.S. Tech Giants",0.14750224350000002
+281,2015-04-16,Google Joins Its U.S. Peers Under Europe’s Scrutiny,0.0421612374
+282,2015-04-15,Case Against Google May Be Undercut by Rapid Changes in Technology,-0.0127609344
+283,2015-04-16,"Microsoft, Once an Antitrust Target, Is Now Google’s Regulatory Scold   ",-0.029154561500000002
+284,2015-04-16,"Daily Report: Joining American Peers, Google Gets Caught in Europe&#8217;s Cross Hairs",0.0268885344
+285,2015-04-17,"With Eye on Mobile, Yahoo Revises Its Search Partnership With Microsoft",0.175758183
+286,2015-04-20,BuzzFeed Says Posts Were Deleted Because of Advertising Pressure,0.0043302677
+287,2015-04-23,Former Microsoft Executive Nancy Tellem to Join Interlude Start-Up,-0.14235882460000002
+288,2015-04-23,Working With Old Office Files on a New Mac OS,0.1900749952
+289,2015-04-24,Remotely Controlling the DVR,0.008205403600000001
+290,2015-04-24,"Microsoft Profits Slip Less Than Projected, With Revenue Up 6%",0.2422011942
+291,2015-04-24,"With Amazon Atop the Cloud, Big Tech Rivals Are Giving Chase",0.1329619735
+292,2015-04-24,"Daily Report: Amazon Dominates Cloud Computing, but Tech Giants Are in Pursuit",0.12893657390000002
+293,2015-04-26,"The Sensor-Rich, Data-Scooping Future",0.11045212300000001
+294,2015-04-30,Repurposing an Old iPhone,0.08884643760000001
+295,2015-04-29,Microsoft Takes Steps to Close Its App Gap on Mobile Devices,0.11185113340000001
+296,2015-04-30,Morning Agenda: Salesforce Said to be Preparing for Takeover Offers,0.0664047971
+297,2015-05-03,"Microsoft (Yes, Microsoft) Has a Far-Out Vision ",0.0174867287
+298,2015-05-01,Salesforce’s Slow Growth May Prompt Hunt for a Buyer,0.0862474144
+299,2015-05-03,"40 Busy Years Later, Paul Allen, a Microsoft Founder, Considers His Creation",0.07482417670000001
+300,2015-05-07,Snapping the Windows Screen,0.0002837976
+301,2015-05-07,Would Salesforce Make Sense for Microsoft?,0.10034430030000001
+302,2015-05-08,"How to Use Siri, Google Now and Cortana Voice Commands",0.2418590337
+303,2015-05-12,Philanthropy Starts After Profits Are Tallied,0.0031154174000000002
+304,2015-05-12,"Bill Gates, Andy Grove and Steve Jobs: The Strategies They Shared",0.0556542277
+305,2015-06-01,Microsoft Sets Date for Windows 10,0.0452720784
+306,2015-06-04,Changing the Look of Excel,0.0454355665
+307,2015-06-11,Microsoft Picks Unusual Place to Make Its Giant Surface Hub: The U.S.,0.036744456700000004
+308,2015-06-10,Daily Report: Microsoft&#8217;s Surface Touch Screen Is Rare Bright Spot for U.S. Manufacturing,0.0092234276
+309,2015-06-11,"Shop Locally, Download Globally",0.07233339550000001
+310,2015-06-15,"Xbox One to Get &#8216;Backward Compatibility,&#8217; Microsoft Says at E3",0.0558190942
+311,2015-06-16,Daily Report: E3 Roundup,-0.09249591830000001
+312,2015-06-16,Google Is Its Own Secret Weapon in the Cloud,0.0646495447
+313,2015-06-18,4 Microsoft Executives to Leave in Top-Level Shake-Up,0.001418205
+314,2015-06-18,How to Get Windows 10,0.0636033416
+315,2015-06-19,University of Washington and Chinese University Unite to Form Technology Institute ,0.0333349183
+316,2015-06-21,Terry Myerson Rises to Powerful New Role in Charge of Microsoft Devices,0.1574883014
+317,2015-06-23,Tech Companies Line Up Behind &#8216;Containers&#8217; and the Cloud,0.0840115324
+318,2015-06-27,Adjusting GPS Coordinates in Photos,-0.0352198072
+319,2015-06-29,Uber to Acquire Mapping Technology and Know-How From Microsoft,0.049464136400000004
+320,2015-06-30,AOL in Deal With Microsoft to Take Over Display Ad Business,0.0113583133
+321,2015-06-30,Daily Report: AOL to Take Over Display Advertising for Microsoft,-0.1341810077
+322,2015-07-02,A Mac-to-iPhone Handoff,0.1861522794
+323,2015-07-01,"In Tests, Yahoo Uses Google to Power Search Results and Ads",0.12451124940000001
+324,2015-07-09,"Cutting Jobs, Microsoft Turns Page on Nokia Deal",0.0208154917
+325,2015-07-09,Free and Cheap Photoshop Alternatives for Windows,0.0363949388
+326,2015-07-09,Microsoft’s Write-Down on Nokia Adds to String of Merger Missteps,0.096475184
+327,2015-07-12,"When This Man Is Irked, He Might Just File a Suit ",0.0679772273
+328,2015-07-13,Microsoft Strikes New Tone for Windows 10 Release,-0.0281950682
+329,2015-07-16,Picking Pockets Off the Firefox Bookmarks List,0.0298556536
+330,2015-07-20,Windows 10 Signifies Microsoft’s Shift in Strategy,0.051537469
+331,2015-07-20,Daily Report: Windows 10 Signifies Microsoft&#8217;s Shift in Strategy,-0.0891169012
+332,2015-07-22,A $7 Billion Charge at Microsoft Leads to Its Largest Loss Ever,0.1554135978
+333,2015-07-23,Keeping Dictation on a Mac Private,0.1319647729
+334,2015-07-25,Taking Stock of a Hard Drive’s Files,-0.0286981761
+335,2015-07-26,Facebook and Other Tech Giants Expand Internet Access in Africa,0.046260412800000004
+336,2015-07-27,Chatting With Xiaoice,0.2058671266
+337,2015-07-28,Windows 10 Review: A Throwback With Upgrades in Software and Security,0.23915821310000002
+338,2015-07-29,Daily Report: The Tough Realities of a Twitter Turnaround,0.12198898940000001
+339,2015-07-31,Addicted to Your Smartphone? The Company That Made It Would Like You to Think So.,0.0825539008
+340,2015-07-31,"In Microsoft’s Nokia Debacle, a View of an Industry’s Feet of Clay",0.1292160302
+341,2015-08-04,"For Sympathetic Ear, More Chinese Turn to Smartphone Program",-0.0029164988000000003
+342,2015-08-01,Microsoft Said to Invest Big Sum in Uber,-0.0846983716
+343,2015-08-02,Farhad and Mike’s Week in Review: Twitter Problems,0.1030967012
+344,2015-08-03,Morning Agenda: Health Care Deals Raise Doubts for Consumers,0.11126067490000001
+345,2015-08-05,"With Halo 5: Guardians, Microsoft Seeks to Lure E-Sports Players Back",0.1511255205
+346,2015-08-05,Daily Report: E-Sports Continues to Reshape Gaming Landscape,0.08657756450000001
+347,2015-08-05,"Following Netflix, Microsoft Sweetens Parental Leave Benefits",-0.0586605817
+348,2015-08-07,Salesforce Ventures and Microsoft Join Informatica Buyout,0.0237580836
+349,2015-08-07,Morning Agenda: Ackman&#8217;s Bet on Mondelez Sales,0.14995108540000002
+350,2015-08-07,Bringing Paternity Leave Into the Mainstream,0.0482581146
+351,2015-08-10,"After Nokia Layoffs, Tech Workers in Finland Regroup and Refocus",0.0517536402
+352,2015-08-13,Stopping the iPhone Step Counter,0.0277260561
+353,2015-08-26,The Appeal of Free: 75 Million Users Download Windows 10 in First Month,0.0034669265
+354,2015-08-26,Facebook Tests a Digital Assistant for Its Messaging App,0.1085688397
+355,2015-08-27,Free Windows 10 Is Downloaded 75 Million Times ,1.7374800000000002e-05
+356,2015-08-29,Protecting Your Mac From Malware and Viruses,0.0686160401
+357,2015-09-03,"Understanding Mac OS X Disk Permissions, and How to Repair Them",0.0452560633
+358,2015-09-02,App Smart | The Best of Windows 10 Apps,-0.0555559583
+359,2015-09-04,"This Week, Sizing Up Smartphone Plans",0.0674009025
+360,2015-09-07,Apple and Other Tech Companies Tangle With U.S. Over Data Access,0.1778963953
+361,2015-09-08,Dell Agrees to Sell Microsoft&#8217;s Surface Tablet,-0.0753200874
+362,2015-09-09,Daily Report: China Asserts Tech Presence; Apple Shows Off New Products,0.1583592445
+363,2015-09-17,How to Talk to Microsoft’s Cortana,0.0662276521
+364,2015-09-19,Shopping for Amazon Apps With Android,0.17367057500000002
+365,2015-09-22,Skype Service Problems for Some Users Worldwide,0.1002053395
+366,2015-09-22,"Microsoft Releases Office 2016, With Features Focused on Teamwork",0.0826020539
+367,2015-09-23,New Microsoft Office With Continual Updates ,0.0981592909
+368,2015-09-24,Xi Jinping Hears Tough Complaints of American Business,0.0068396782
+369,2015-09-26,Changing the Search Engine in Microsoft Edge  ,0.10011219980000001
+370,2015-09-27,Microsoft Leads Movement to Offset Emissions With Internal Carbon Tax  ,0.0849497095
+371,2015-09-28,"Narendra Modi, Indian Premier, Courts Silicon Valley to Try to Ease Nation’s Poverty",0.030930385
+372,2015-10-01,Easing Screen-Based Eyestrain,0.0940580443
+373,2015-09-30,Microsoft and Google Call an End to Patent Battles,0.0708105192
+374,2015-10-03,Scheduling Automatic Backups in Windows 10,-0.024837864600000002
+375,2015-10-02,Dear Minecraft Villagers: I&#8217;m Worried About You.,-0.0263250638
+376,2015-10-05,Tech Giants Top Best Global Brands List,0.1082761064
+377,2015-10-07,The Hardware Side of Microsoft Unveils a Pile of New Devices,0.0690702274
+378,2015-10-07,Daily Report: Microsoft Turns On the Hardware Charm,-0.023860028000000002
+379,2015-10-09,Microsoft&#8217;s Mission to Reignite PC Sector May Be Taking Hold,-0.0334783085
+380,2015-10-11,Obama Won’t Seek Access to Encrypted User Data,-0.0284476001
+381,2015-10-14,Daily Report: Putting Twitter&#8217;s Layoffs in Perspective,-0.0404536761
+382,2015-10-15,Restoring Sound to Windows 10,0.0957895741
+383,2015-10-17,Keeping a Hard Drive From Getting Too Full,0.0892195031
+384,2015-10-19,Daily Report: Tech Tussles Take Center Stage in Earnings,-0.1655763388
+385,2015-10-24,Looking for Sharper Images in Google Earth,0.0783732012
+386,2015-10-21,"As U.S. Tech Companies Scramble, Group Sees Opportunity in Safe Harbor Decision",0.19816750290000001
+387,2015-10-22,Microsoft’s Rule-Breaking Vision of a Future With Countless Devices,0.1505685002
+388,2015-10-22,Daily Report: A Trio of Earnings From Tech Behemoths,0.039067518
+389,2015-10-23,"Microsoft Earnings Climb, Lifted by Strong Growth in Cloud Computing",0.1902050525
+390,2015-10-23,"The Cloud Is Here, Separating Disrupters From Disrupted",-0.00988553
+391,2015-10-25,Mike and Nick’s Week in Tech: Microsoft in the Cloud,0.007886896800000001
+392,2015-10-25,Microsoft Goes Upscale With Fifth Avenue Flagship Store,0.0832331032
+393,2015-10-29,Streamlining Data-Hoarding Apps,0.09740638730000001
+394,2015-10-31,More Than One Way to Fix Firefox,0.0569025762
+395,2015-10-31,U.S. Tech Giants May Blur National Security Boundaries in China Deals,0.15661035480000002
+396,2015-11-04,"Digital Transformation Going Mainstream in 2016, IDC Predicts",0.0106221139
+397,2015-11-08,"Microsoft’s Stock Math: Fewer Shares, Pricier Shares",0.0020937324
+398,2015-11-12,Weighing Benefits of Windows 10 Upgrade,0.0717247725
+399,2015-11-18,Microsoft Sheds Reputation as an Easy Mark for Hackers,0.0397631712
+400,2015-11-17,Daily Report: Microsoft Finds Its Security Groove,-0.0257535949
+401,2015-11-21,Backing Up iCloud Contacts,0.0800458267
+402,2015-11-20,A Reality Check for Microsoft&#8217;s HoloLens,0.08881474290000001
+403,2015-11-26,Updating Windows 10,0.0886961743
+404,2015-12-01,How to Enlarge the Text Cursor,0.052869390700000005
+405,2015-12-09,Qualcomm Is Accused of Violating Antitrust Rules in Europe,-0.0532153957
+406,2015-12-09,How to See What Windows 10 Just Installed,0.053019229300000005
+407,2015-12-11,Virtually Using Windows XP,0.1332134157
+408,2015-12-11,A Learning Advance in Artificial Intelligence Rivals Human Abilities,0.0314103626
+409,2015-12-21,"As Downloads Take Over, a Turning Point for the Video Game Industry",-0.0845561922
+410,2015-12-29,Former Xbox Chief Robbie Bach on Console Battles,-0.09263684600000001
+411,2016-01-01,Microsoft to Notify Users of Government Hackings,0.056984972200000004
+412,2016-01-04,Bill Gates on Books and Blogging,0.1071507558
+413,2016-01-06,Microsoft Faces New Scrutiny in China,0.0229501221
+414,2016-01-06,Morning Agenda: Bank Rule Distorting Performance Is Repealed,0.1204640865
+415,2016-01-07,Setting Up Tabs to Open Automatically in Microsoft Edge,0.1739184111
+416,2016-01-11,Daily Report: The Tech News Cycle is About to Ramp Up,0.1071378216
+417,2016-01-12,Printing a Paper Backup of Your iCloud Contacts,0.09877718240000001
+418,2016-01-17,Fund Managers Win With Tech Stalwarts and Burly Brand Names,0.09910062700000001
+419,2016-01-20,Microsoft Acquires Minecraft App for Schools,0.0566185378
+420,2016-01-20,Sticking With Windows 7,0.06746313720000001
+421,2016-01-19,Microsoft to Donate $1 Billion in Cloud Services to Nonprofits and Researchers,0.0697603747
+422,2016-01-21,Tech’s ‘Frightful 5’ Will Dominate Digital Life for Foreseeable Future,0.08974179630000001
+423,2016-01-23,Making the Screen Easier to Read,0.0907361731
+424,2016-01-25,"With Imposed Transparency and Concerned Millennials, a Boom in Corporate Responsibility?",0.1431797594
+425,2016-01-28,Protecting Personal Information From Virtual Assistants,0.034910056700000004
+426,2016-01-27,"Siri, Alexa and Other Virtual Assistants Put to the Test",0.0804384425
+427,2016-01-29,"Microsoft Profit and Revenue Fall, but Cloud Computing Grows",0.1586811393
+428,2016-01-29,Daily Report: Divergent Fortunes in Cloud Computing,-0.0827928334
+429,2016-01-30,Replacing Windows Media Center,-0.03291234
+430,2016-01-31,Farhad and Mike’s Week in Tech: Lessons From Earnings Season,0.080669485
+431,2016-02-01,Microsoft Plumbs Ocean’s Depths to Test Underwater Data Center,-0.026158981
+432,2016-02-02,Creating a Family Website,0.07452228670000001
+433,2016-02-03,"Magic Leap, an Augmented Reality Firm, Raises $793 Million",0.0167898629
+434,2016-02-04,An Expanding Universe of Space Apps,0.0331863388
+435,2016-02-04,"In Silicon Valley, a Time-Honored Sport Looks to the Future",0.0162556898
+436,2016-02-05,Reinstalling Windows 10,0.0800545439
+437,2016-02-06,Moving Files to a Mac From a PC,0.1178299785
+438,2016-02-12,Using Older Hardware With Windows 10,0.1605063826
+439,2016-02-17,Moving Music Between iPads,0.0513428599
+440,2016-02-19,Apple Letter on iPhone Security Draws Muted Tech Industry Response,0.1121753454
+441,2016-02-19,Windows 10 Upgrade Options for Vista Users,0.1170226708
+442,2016-02-23,"Bill Gates, the &#8216;Impatient Optimist,&#8217; Lays Out his Clean-Energy Innovation Agenda",0.1242939457
+443,2016-02-24,Bill Gates Weighs In on Apple’s Clash With the F.B.I.,0.1943923682
+444,2016-02-25,Watching DVD Movies on Windows 10,-0.0070732809
+445,2016-02-25,What Microsoft’s Xamarin Purchase Says About the Cloud Computing Fight,0.0288684126
+446,2016-02-27,A Brief Explanation of Apple’s Showdown With the U.S. Government,0.12143221500000001
+447,2016-02-27,Zenefits to Lay Off 17% of Work Force,-0.0979950428
+448,2016-03-02,Keeping Track of Windows Updates,-0.1114059612
+449,2016-03-03,Checking the Graphics Card Specifications on Your Computer,0.0872671381
+450,2016-03-04,Apple Is Rolling Up Backers in iPhone Privacy Fight Against F.B.I.,0.0122099333
+451,2016-03-08,Tech Giants Battle for Top Cloud Talent,0.10554803160000001
+452,2016-03-08,Microsoft Opens Its Corporate Data Software to Linux,0.0717759654
+453,2016-03-08,Microsoft to Close 2 Game Development Studios,0.0657686889
+454,2016-03-12,Getting the Weather Report From Windows,0.0939396918
+455,2016-03-15,Recording Live Television in Windows 10,-0.0291083697
+456,2016-03-14,"Hey Siri, Can I Rely on You in a Crisis? Not Always, a Study Finds",0.1934552789
+457,2016-03-16,Marking Up a Mac’s iBook Pages,0.1379169226
+458,2016-03-25,Finding Photo Programs That Recognize Faces,0.11139184240000001
+459,2016-03-25,Microsoft Created a Twitter Bot to Learn From Users. It Quickly Became a Racist Jerk.,0.1759935468
+460,2016-03-26,How to Live Without Windows 10,0.0872453153
+461,2016-03-26,"The Race Is On to Control Artificial Intelligence, and Tech’s Future",0.11501020940000001
+462,2016-03-28,Silicon Valley Looks to Artificial Intelligence for the Next Big Thing,0.023151068
+463,2016-03-31,"Microsoft Trumpets Windows 10, and Pushes Into Sci-Fi Tech",0.1419962496
+464,2016-04-05,Adding Links to the Windows 10 Start Menu,0.0261114892
+465,2016-04-09,"For Some Top Nonprofits, Changing the World Begins in Seattle",0.0406427197
+466,2016-04-11,"Billing by Millionths of Pennies, Cloud Computing’s Giants Take In Billions",-0.0833854452
+467,2016-04-12,Marking Up Web Pages in Windows 10,0.1355215907
+468,2016-04-14,The Minecraft Generation,0.039563465900000004
+469,2016-04-14,Microsoft Sues Justice Department to Protest Electronic Gag Order Statute,0.0217550304
+470,2016-04-16,Microsoft Goes on Offensive Against Justice Department,0.017882742
+471,2016-04-21,Watching the Clock on That Windows 10 Deal,0.1312817782
+472,2016-04-21,What Chatbots Reveal About Our Own Shortcomings,0.0577221476
+473,2016-04-22,Microsoft’s Cloud Business Falls Short of Investors’ Hopes,-0.0549791269
+474,2016-04-23,The No-Good Week in Tech’s (Hopeful) Trip to a Bright Future,0.07934158300000001
+475,2016-04-23,Microsoft and Google Agree to Drop Mutual Complaints,0.1229348183
+476,2016-04-26,Removing QuickTime for Windows in a Hurry,0.017905103000000002
+477,2016-04-29,Europe’s Case Against Google Might Help Rivals More Than Consumers,0.1281352192
+478,2016-04-29,Microsoft Will Not Donate Money to Republicans&#8217; Convention,-0.0067708492
+479,2016-05-05,Restoring Windows Photo Viewer in Windows 10,-0.0016923944
+480,2016-05-10,"The Clash of Privacy, Legislation and Software",0.0422559381
+481,2016-05-13,Brooklyn Judge Will Not Force Facebook’s Silence on Subpoenas,-0.0742929652
+482,2016-05-14,What to Do if Windows 10 Eats Your Files,0.122285217
+483,2016-05-19,Nokia Phones May Find Life After Microsoft,0.043549418400000005
+484,2016-05-19,"Why Windows 10 Upgrades Go Wrong, and How to Avoid It",0.15674294530000002
+485,2016-05-20,Silicon Valley’s Artificial Intelligence Marathon Is On,0.1088159904
+486,2016-05-24,Microsoft Awards First Grants to Help Expand Global Internet Access,0.0871508792
+487,2016-05-25,Locating a Lost Windows Device,0.0977054462
+488,2016-05-26,"Microsoft Cutting 1,850 Jobs in Smartphone Unit",-0.20859771970000002
+489,2016-05-25,Morning Agenda: Hewlett-Packard Spinoff Prepares to Split Again,0.10761214050000001
+490,2016-05-28,Fixing Microsoft Office for Mac Update Errors,-0.0208786931
+491,2016-06-02,Why the World Is Drawing Battle Lines Against American Tech Giants,0.0046664528
+492,2016-06-07,Microsoft Finds Cancer Clues in Search Queries,0.0114245089
+493,2016-06-09,Getting Over Stage Fright With the Help of Your Smartphone,0.1345051378
+494,2016-06-08,How Gaming Helped Launch the Attack of the Internet Trolls,0.0178582687
+495,2016-06-13,Microsoft’s Biggest Deal,0.35706314440000003
+496,2016-06-14,Keeping an iPhone Online When the Signal Is Weak,0.1049906686
+497,2016-06-14,Handful of Advisers Behind Microsoft’s Deal for LinkedIn,0.0794216022
+498,2016-06-13,Microsoft & LinkedIn C.E.O.s on Deal,0.1336584985
+499,2016-06-14,Microsoft and Apple Making Headlines,0.1975296736
+500,2016-06-13,"Microsoft Buys LinkedIn for $26.2 Billion, Reasserting Its Muscle",0.180223465
+501,2016-06-14,Microsoft’s Deal for LinkedIn Raises Red Flags,0.1689818949
+502,2016-06-14,"For Microsoft, LinkedIn Deal Could Be a $26.2 Billion Time Machine",0.14635814730000002
+503,2016-06-14,A LinkedIn Timeline,0.10952639580000001
+504,2016-06-14,One Unspoken Reason Behind the Microsoft-LinkedIn Deal,0.0881008431
+505,2016-06-13,"Microsoft Takes Aim at Sony With Cheaper Xbox, Virtual Reality and Cross-Platform Games",0.06467454880000001
+506,2016-06-14,Morning Agenda: The Unspoken Reason Behind the LinkedIn Sale,0.1455892175
+507,2016-06-15,Why Microsoft Likes LinkedIn,-0.0701727644
+508,2016-06-15,Checking Your Windows 10 Lists,0.0058024824000000004
+509,2016-06-17,Unhitching the PC From OneDrive,0.1254259497
+510,2016-06-16,The First Big Company to Say It’s Serving the Legal Marijuana Trade? Microsoft.,0.1074625775
+511,2016-06-17,Why LinkedIn Will Make You Hate Microsoft Word,-0.00320465
+512,2016-06-17,Morning Agenda:  A Who&#8217;s Who of Financiers Expected at Trump Fund-Raiser,0.1231018677
+513,2016-06-18,Microsoft Makes a Marijuana Play,0.1601294577
+514,2016-06-18,Weighing the System Upgrade Decision,0.0643790141
+515,2016-06-19,Farhad’s and Mike’s Week in Tech: That Business of Microsoft Buying LinkedIn,0.0974122509
+516,2016-06-23,"Buybacks by Companies Like Apple May Signal Danger, Not Growth",0.11781975630000001
+517,2016-06-25,Sharing Screens Between PCs Running Different Versions of Windows,0.0460731126
+518,2016-06-28,Amazon Unveils Online Education Service for Teachers,0.19195222850000002
+519,2016-06-28,Tech Makes Its Pitch to the Education Community,0.1317539215
+520,2016-06-29,Downloading Video Streams to Go,0.07753770800000001
+521,2016-06-30,Third-Party Keyboards Give Mobile Users More Options,0.1714404076
+522,2016-07-02,What to Try When the Start Menu Just Won’t Start,0.1030340567
+523,2016-07-04,Hiding From Windows 10,0.0006452749
+524,2016-07-08,"Kevin Turner, Microsoft Executive, to Join Citadel Securities",0.0416856892
+525,2016-07-08,Morning Agenda: Growing Unease as British Mutual Funds Block the Exit Doors,0.033860743
+526,2016-07-15,Microsoft Wins Appeal on Overseas Data Searches,0.1923642904
+527,2016-07-15,Morning Agenda: Yahoo Is Said to Collect Final Bids,0.1470723301
+528,2016-07-17,Farhad’s and Mike’s Week in Tech: One Game to Rule Them All,0.08753765370000001
+529,2016-07-19,Microsoft Case Shows the Limits of a Data Privacy Law,0.1110520884
+530,2016-07-19,"Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page",0.1110118702
+531,2016-07-20,"Microsoft Earnings Are Up, Cushioned by Its Cloud Business",0.0497374646
+532,2016-07-21,Finding the Right Microsoft Office,0.058747679000000004
+533,2016-07-25,Google Races to Catch Up in Cloud Computing,0.0524925776
+534,2016-07-26,Getting Extensions for Edge,-0.023963674900000002
+535,2016-07-27,Easy Editing for Mac Photos,0.1800816506
+536,2016-07-31,Farhad’s and Mike’s Week in Tech: The Cautionary Tale of the Fall of Yahoo,0.0489281565
+537,2016-08-05,Finding Alternatives to Microsoft Excel,0.076420024
+538,2016-08-06,"When Every Company Is a Tech Company, Does the Label Matter?",0.2312236279
+539,2016-08-10,"In Buying LinkedIn, Microsoft Might Pay Heed to Monster",-0.0217028633
+540,2016-08-18,Converting Spreadsheets in Apple’s Numbers to Excel,0.0270187985
+541,2016-08-20,Picking a Digital Publishing Format,0.1603981405
+542,2016-08-26,"Cloud Computing Brings Sprawling Centers, but Few Jobs, to Small Towns",0.08654552700000001
+543,2016-09-02,How Tech Giants Are Devising Real Ethics for Artificial Intelligence,0.08505285530000001
+544,2016-09-03,Microsoft’s Challenge to Government Secrecy Wins Dozens of Supporters,0.1386188716
+545,2016-09-03,"Goodbye, Ivory Tower. Hello, Silicon Valley Candy Store.",0.06380424650000001
+546,2016-09-14,Move Your Address Book From Outlook to Google,0.037796720900000004
+547,2016-09-14,Will Trump Release His Tax Returns? Billionaire Pledges Up to $5 Million for Veterans if So,0.0384818539
+548,2016-09-16,How to Manage Your Windows Drivers,-0.0224895868
+549,2016-09-20,Get Sharper Text on Your Windows Screen,-0.007025069100000001
+550,2016-09-27,So Now You Want Windows 10 …,0.0397118442
+551,2016-09-26,What It’s Like to Fight Online Hate,-0.0519282073
+552,2016-09-28,Daily Report: Twitter Attracts a Wide Range of Suitors,0.0652330741
+553,2016-09-29,Protecting Humans and Jobs From Robots Is 5 Tech Giants’ Goal,0.0716942996
+554,2016-09-30,Salesforce Is Said to Question Microsoft-LinkedIn Deal in Europe,0.08957210930000001
+555,2016-09-30,Microsoft Reorganizes Its Research Efforts Around A.I.,0.11870401350000001
+556,2016-10-01,Daily Report: Trust Busters Destined to Dig into Data,-0.0246192571
+557,2016-10-04,U.S. Tech Giants Are Investing Billions to Keep Data in Europe,0.099624157
+558,2016-10-10,Looking for a Choice of Voices in A.I. Technology,0.1585279256
+559,2016-10-12,How to Bid Adieu to Yahoo,0.0475147665
+560,2016-10-17,Earnings Reports for Goldman Sachs and Yahoo,0.058730050900000004
+561,2016-10-18,Bill Belichick Throws In the Tablet,0.0963373482
+562,2016-10-20,Microsoft Shares Hit a High With Promise of the Cloud’s Profit Margins,0.1577176303
+563,2016-10-21,"Daily Report: Microsoft, Ahead in the Cloud",-0.08230251820000001
+564,2016-10-26,Microsoft Unveils Its First Desktop PC,0.1550521702
+565,2016-10-29,"Farhad and Mike’s Week in Tech: Microsoft, Apple and Halloween!",0.1447924972
+566,2016-11-02,Microsoft Puts Slack in Cross Hairs With New Office Chat App,0.069860585
+567,2016-11-04,A Formula for Easier-to-Read Excel Work Sheets,0.1953296065
+568,2016-11-05,Farhad’s and Mike’s Week in Tech: Gaming as Prophylaxis to Elections,0.10014966880000001
+569,2016-11-05,How LinkedIn Drove a Wedge Between Microsoft and Salesforce,0.09944444150000001
+570,2016-11-07,Business Leaders Support Steps to Rescue Climate,0.1345096976
+571,2016-11-07,Larry Ellison’s Hardball Tactics Win NetSuite for Oracle,0.1051780507
+572,2016-11-10,Parallels Between Europe’s Antitrust Cases Against Google and Microsoft,0.0508849509
+573,2016-11-20,Microsoft Spends Big to Build a Computer Out of Science Fiction,-0.0387442112
+574,2016-11-21,Making Movies With Windows 10,0.1288415045
+575,2016-12-01,Reintroduce Yourself to Microsoft’s Cortana,0.18002031740000002
+576,2016-12-06,Facebook and Other Tech Companies Seek to Curb Flow of Terrorist Content,0.14566767220000001
+577,2016-12-06,Europe Presses American Tech Companies to Tackle Hate Speech,0.0855108202
+578,2016-12-06,Adding Desktop Icons for Windows 10,-0.0343368277
+579,2016-12-08,"With LinkedIn, Microsoft Looks to Avoid Past Acquisition Busts",0.1208725497
+580,2016-12-09,Daily Report: What Microsoft Needs From LinkedIn,-0.1253784746
+581,2016-12-13,"When Trump Meets Tech Leaders, Jobs Will Be on the Agenda",-0.0006939073
+582,2016-12-25,Why the Computing Cloud Will Keep Growing and Growing,0.0093548
+583,2017-01-01,"In Year of Anti-Muslim Vitriol, Brands Promote Inclusion",-0.0362869427
+584,2017-01-02,Where to Go if You Forget Your Hotmail Password,0.1851751357
+585,2017-01-04,Tech Giants Seem Invincible. That Worries Lawmakers.,0.1307066232
+586,2017-01-09,Data Could Be the Next Tech Hot Button for Regulators,0.13378317650000002
+587,2017-01-12,Silicon Valley Takes a Right Turn,0.1720299125
+588,2017-01-12,A New Destination for Files Downloaded From Microsoft Edge,0.1368092149
+589,2017-01-17,Joining the Windows Testing Team,-0.0154062212
+590,2017-01-27,"Microsoft’s Profit Rises 4 Percent, as Cloud Business Booms",0.3103510141
+591,2017-01-31,Give Windows 10 a Restart Schedule,0.3271929324
+592,2017-02-06,"Tech Opposition to Trump Propelled by Employees, Not Executives",0.09903278950000001
+593,2017-02-06,Why Windows 10 Wants to Automatically Restart,0.11631632600000001
+594,2017-02-10,Sticking With Windows 7,0.06746313720000001
+595,2017-02-17,What to Do When Windows Updates Fail,-0.0098271994
+596,2017-02-24,Automatic Update Headaches,-0.0766641423
+597,2017-02-27,Business Giants to Announce Creation of a Computing System Based on Ethereum,0.11080148070000001
+598,2017-03-01,Editing Documents on Both a PC and a Mac,0.255218029
+599,2017-03-02,Apple’s Devices Lose Luster in American Classrooms,0.0635639653
+600,2017-03-07,How to Get Windows 10 to Run Older Programs,0.059405479600000005
+601,2017-03-15,Just What Was in That iOS System Update?,-0.052266944200000005
+602,2017-03-28,‘Mortal Kombat’ and ‘Solitaire’ Among Video Game Hall of Fame Finalists,0.0762242749
+603,2017-04-01,"Pamela Edstrom, Who Helped Shape Microsoft’s Public Image, Dies at 71",0.1176387668
+604,2017-04-10,"Yes, Another Windows 10 Update Is Here",0.0168899354
+605,2017-04-11,A Hangout for Old Desktop Notifications,0.2012155652
+606,2017-04-16,"Slack, an Upstart in Messaging, Now Faces Giant Tech Rivals",-0.0167444143
+607,2017-04-21,What to Try When the Firefox Browser Stalls,0.0325695798
+608,2017-04-27,Movers: Dan Loeb Takes Aim at Honeywell,0.0294045061
+609,2017-04-28,"Cloud Produces Sunny Earnings at Amazon, Microsoft and Alphabet",0.0055245063
+610,2017-04-28,Daily Report: Cloud Computing Asserts Itself,-0.029234072200000003
+611,2017-04-30,"Dubai Introduces Its Own Font, Lauding Free Expression It Does Not Permit",0.1386913508
+612,2017-05-01,Daily Report: A Busy Week Ahead,0.0546428747
+613,2017-05-02,Microsoft Looks to Regain Lost Ground in the Classroom,0.0082120644
+614,2017-05-03,Giving the Behemoths a Leg Up on the Little Guy,0.16507512330000002
+615,2017-05-05,Checking for the Latest Windows 10 Update,0.0871246681
+616,2017-05-08,When Apple Maps Marks Your Spot,0.1534664631
+617,2017-05-08,"The ‘Frightful Five’ Aren’t So Scary, as Long as They’re Competing",0.0534080155
+618,2017-05-10,Which Tech Giant Would You Drop?,0.08577167990000001
+619,2017-05-10,Tech’s Frightful Five: They’ve Got Us,-0.1673884839
+620,2017-05-10,Daily Report: Too Late to Run From Tech’s Frightful Five,-0.059243693900000005
+621,2017-05-14,The World Is Getting Hacked. Why Don’t We Do More to Stop It?,-0.0074407212
+622,2017-05-14,Ransomware’s Aftershocks Feared as U.S. Warns of Complexity,0.018803795800000002
+623,2017-05-15,"China, Addicted to Bootleg Software, Reels From Ransomware Attack",-0.0319989324
+624,2017-05-16,"In Ransomware Attack, Where Does Microsoft’s Responsibility Lie?",0.0645936057
+625,2017-05-16,"In Computer Attacks, Clues Point to Frequent Culprit: North Korea",0.0018172996
+626,2017-05-16,Use Your Phone as a Digital Magnifying Glass,0.1987693459
+627,2017-05-16,Daily Report: Looking for Someone to Blame in the Ransomware Attack,-0.0301144794
+628,2017-05-22,How to Make It Known There’s a Problem With an App,0.1534885317
+629,2017-06-01,‘Climate Change Is Real’: Many U.S. Companies Lament Paris Accord Exit,0.0826465636
+630,2017-06-02,"Greetings, User. You Can Change Your Name.",0.06711968780000001
+631,2017-06-06,Controlling Notifications in Windows 10,-0.0241527352
+632,2017-06-12,A Slump in Tech Stocks That Leaves Some Investors Mystified,0.1277637482
+633,2017-06-20,Tech Titans Make Pilgrimage to White House to Discuss Government Systems,-0.0364960916
+634,2017-06-22,Trading in a Briefcase for a Drive in the Sky,0.1161751151
+635,2017-06-27,How Silicon Valley Pushed Coding Into American Classrooms,0.05749695
+636,2017-06-28,"A New Kind of Tech Job Emphasizes Skills, Not a College Degree",0.08205025640000001
+637,2017-06-28,Screening Out Malware with Microsoft Edge,0.0108586736
+638,2017-06-28,"Ukraine Cyberattack Was Meant to Paralyze, not Profit, Evidence Shows",0.07028421010000001
+639,2017-07-03,"After Ransomware Attack, Windows XP Is Not Back From the Dead",0.08005393300000001
+640,2017-07-06,"Microsoft to Cut Up to 4,000 Sales and Marketing Jobs",0.0168648195
+641,2017-07-10,Digital Privacy to Come Under Supreme Court’s Scrutiny,-0.0737137422
+642,2017-07-11,"To Close Digital Divide, Microsoft to Harness Unused Television Channels",0.0753137767
+643,2017-07-11,Daily Report: A Technology to Close the Digital Divide,0.0330347903
+644,2017-07-19,Shopping for New Software,0.1227737963
+645,2017-07-21,Microsoft Is Rewarded for Turning to the Cloud,0.003886814
+646,2017-07-24,Microsoft Paint’s Days May Be Numbered,-0.1351914555
+647,2017-07-26,How Microsoft Has Become the Surprise Innovator in PCs,0.0087486738
+648,2017-07-26,The Surprising New PC Innovator? Microsoft,0.1225781739
+649,2017-08-02,Gearing Up for Another Windows 10 Update,0.1555216312
+650,2017-08-03,Microsoft Shifts From Paying Outside Lawyers by the Hour,-0.0196009818
+651,2017-08-04,Taking Your AutoCorrect Entries With You,0.1211612001
+652,2017-08-16,Can Artificial Intelligence Fly a Plane?,-0.0113714142
+653,2017-08-16,Microsoft Teaches Autonomous Gliders to Make Decisions on the Fly,0.046403396900000005
+654,2017-08-16,Getting Microsoft Word to Call You by Your Real Name,0.0283741355
+655,2017-08-30,"‘Cortana, Open Alexa,’ Amazon Says. And Microsoft Agrees.",0.1422274262
+656,2017-09-01,Farhad’s and Nick’s Week in Review: Uber’s New Boss and Amazon’s New Supermarket,-0.021537303900000002
+657,2017-09-02,"Silicon Valley Courts Brand-Name Teachers, Raising Ethics Issues",0.1206735075
+658,2017-09-03,"In Her Family’s Footsteps, a Reporter Takes to the Classroom",0.08962124590000001
+659,2017-09-06,Democrats Begin Legal Assault on Trump’s Move to End ‘Dreamer’ Program,0.0616730489
+660,2017-09-12,How to Pick Your Favorite Font for Word Files,0.0810452923
+661,2017-09-13,How to Keep on Top of Technology When You Write About It,0.023183247100000002
+662,2017-09-15,"Serving the Community, Working for Microsoft",0.0711886957
+663,2017-09-16,Chips Off the Old Block: Computers Are Taking Design Cues From Human Brains,0.0657070056
+664,2017-09-18,"Outlook for Android, Plain and Simple",0.12069407110000001
+665,2017-09-22,World Leaders Urge Big Tech to Police Terrorist Content,-0.0088534849
+666,2017-09-25,Engrave Your Own Stationery Template,0.0557444952
+667,2017-09-26,Tech Firms Add $300 Million to Trump Administration’s Computer Science Push,-0.0104060965
+668,2017-09-27,Microsoft C.E.O. Says Tech’s Progress on Gender Equality Is ‘Not Sufficient’,0.0474137925
+669,2017-09-27,"Satya Nadella on Women in Tech, A.I. and E-Sports",0.0026943088
+670,2017-10-02,Move Your Mailbox to Another App,0.0880084634
+671,2017-10-04,Keeping Your Reading List in Sync,-0.0082611041
+672,2017-10-06,Change the Key That Unlocks Your Accounts,0.1961290389
+673,2017-10-06,Don’t Get Too Comfortable at That Desk,0.009898441800000001
+674,2017-10-06,Microsoft’s Chief Wants You to Know He’s a Different Kind of Leader,0.0936333314
+675,2017-10-07,Who Invented ‘Zero’?,0.13191136720000002
+676,2017-10-09,Google Finds Accounts Connected to Russia Bought Election Ads,0.0134922611
+677,2017-10-11,The Frightful Five Want to Rule Entertainment. They Are Hitting Limits.,0.10650008920000001
+678,2017-10-13,How to Get Cortana to Keep Track of Your Favorite Teams,0.0959595516
+679,2017-10-16,Justices to Decide on Forcing Technology Firms to Provide Data Held Abroad,0.0556553304
+680,2017-10-18,How the Frightful Five Put Start-Ups in a Lose-Lose Situation,0.011221912700000001
+681,2017-10-23,New Windows for the Fall Season,-0.0520766228
+682,2017-10-24,U.S. to Limit Use of Secrecy Orders That Microsoft Challenged,0.1582101732
+683,2017-10-25,Can Washington Stop Big Tech Companies? Don’t Bet on It,-0.07715793700000001
+684,2017-10-26,"Scanning, Converting and Editing Text on the Go",0.1441649795
+685,2017-10-26,What Worries? Big Tech Companies Post Glowing Quarterly Profits,0.1449696869
+686,2017-10-31,How to Get Cortana’s Undivided Attention,0.1130534485
+687,2017-11-01,The Upside of Being Ruled by the Five Tech Giants,0.0045705042000000005
+688,2017-11-05,Building A.I. That Can Build A.I.,0.3431534767
+689,2017-11-07,Microsoft Office Mobile Apps: Free or With a Fee,0.0320732594
+690,2017-11-08,Our Guide to the Holiday Season’s Biggest Video Games and Consoles,0.1851420403
+691,2017-11-10,LinkedIn Faces Setback in China as It Runs Afoul of New Rules,-0.0448565483
+692,2017-11-21,"Skype Vanishes From App Stores in China, Including Apple’s",0.0814406127
+693,2017-11-29,"Microsoft to Expand Campus, as Amazon Looks Elsewhere",0.0713191256
+694,2017-12-12,"Net Neutrality Protests Move Online, Yet Big Tech Is Quiet",-0.043752450500000005
+695,2017-12-19,Microsoft Moves to End Secrecy in Sexual Harassment Claims,0.041484836500000004
+696,2017-12-20,What the Tax Bill Fails to Address: Technology’s Tsunami,-0.0210793521
+697,2018-01-04,What You Need to Do Because of Flaws in Computer Chips,0.0780881867
+698,2018-01-23,"‘She’s Not Laughing’: In Davos, Taking on Sexual Harassment",-0.035467159000000005
+699,2018-01-27,The Mind Meld of Bill Gates and Steven Pinker,0.06255242970000001
+700,2018-01-31,Microsoft Sales Lifted by Cloud Computing,0.1950545907
+701,2018-02-20,The Case Against Google,0.0884566829
+702,2018-02-20,Peggy Johnson on A.I.’s Potential,0.12921105330000002
+703,2018-02-21,"To Give A.I. the Gift of Gab, Silicon Valley Needs to Offend You",0.1980648786
+704,2018-03-10,Christopher Liddell Is Front-Runner to Become Trump’s Top Economic Adviser,0.1048859134
+705,2018-03-29,Recording Skype Video Calls,0.1102427319
+706,2018-03-29,Microsoft Reorganizes to Fuel Cloud and A.I. Businesses,0.0936118886
+707,2018-04-14,When Mr. Gates Went to Washington,0.05801904200000001
+708,2018-04-17,Tech Firms Sign ‘Digital Geneva Accord’ Not to Aid Governments in Cyberwar,0.07694656400000001
+709,2018-04-17,Goldman’s Gains in Trading Raise a Familiar Dilemma: DealBook Briefing,0.17978328470000002
+710,2018-04-26,Microsoft’s Cloud Has Business Booming Again,0.12206435950000001
+711,2018-05-07,Microsoft Tries a New Role: Moral Leader,0.1066496894
+712,2018-05-18,What the Microsoft Antitrust Case Taught Us,0.0373245664
+713,2018-06-04,"Microsoft Buys GitHub for $7.5 Billion, Moving to Grow in Coding’s New Era",0.1973567158
+714,2018-06-17,"With Twitch, Amazon Tightens Grip on Live Streams of Video Games",0.1720870733
+715,2018-06-19,"Microsoft Employees Protest Work With ICE, as Tech Industry Mobilizes Over Immigration",-0.0340155549
+716,2018-06-22,The Week in Tech: Silicon Valley Gets Even More Political,0.0064486885
+717,2018-06-26,Top Tech Companies Met With Intelligence Officials to Discuss Midterms,0.1488830894
+718,2018-07-13,Microsoft Urges Congress to Regulate Use of Facial Recognition,0.0018843748000000001
+719,2018-07-19,Microsoft Emerges as Clear No. 2 in Cloud Computing,0.1045118943
+720,2018-07-27,Microsoft Employees Question C.E.O. Over Company’s Contract With ICE,-0.048347830800000005
+721,2018-08-01,Stumbles? What Stumbles? Big Tech Is as Strong as Ever,0.1379625648
+722,2018-08-21,"New Russian Hacking Targeted Republican Groups, Microsoft Says",0.0738446116
+723,2018-09-03,Silicon Valley Doesn’t Like Trump. It Can Still Work With the Government.,0.045210540300000004
+724,2018-09-09,Role Models Tell Girls That STEM’s for Them in New Campaign,0.1326548308
+725,2018-09-12,The Metamorphosis of Silicon Valley C.E.O.s: From Big to Boring,-0.019191747500000002
+726,2018-10-15,"Paul G. Allen, Microsoft’s Co-Founder, Is Dead at 65",0.12362875790000001
+727,2018-10-24,"Microsoft’s Earnings Surge, as Cloud Bet Continues to Pay Off",0.0963718966
+728,2018-10-25,Tech Earnings Provide a Breather From the Selling,0.12320476030000001
+729,2018-10-26,Microsoft Says It Will Sell Pentagon Artificial Intelligence and Other Advanced Technology,-0.0031442493
+730,2018-11-10,Facebook to Drop Forced Arbitration in Harassment Cases,0.0090544522
+731,2018-11-27,"Apple’s Bad Month Is Getting Worse, Jeopardizing Its Status as Most Valuable Company",0.12963639200000002
+732,2018-11-29,Microsoft Is Worth as Much as Apple. How Did That Happen?,0.2487025857
+733,2018-12-04,"Digital Divide Is Wider Than We Think, Study Says",0.048231035500000005
+734,2018-12-14,Two Companies Finally Speak Up ,0.0493767969
+735,2018-12-20,PowerPoint Is the Most Efficient Way for Kids to Manage Their Parents,0.2056979984
